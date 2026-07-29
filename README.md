@@ -1,18 +1,18 @@
 # Ahmed Arfaoui — Portfolio
 
-A cinematic portfolio for Ahmed Arfaoui, AI and Data Science Engineer. Its
-visual language combines Formula 1 telemetry, editorial photography, and
-evidence-led engineering.
+A cinematic, multi-page portfolio for Ahmed Arfaoui, AI and Data Science
+Engineer and photographer. Its visual language combines Formula 1 telemetry,
+editorial photography, personal resilience, and evidence-led engineering.
 
-## Featured work
+## Pages
 
-- Open Web Catcher — agentic browser automation with LangGraph, LangChain, MCP,
-  FastAPI, Next.js, and PostgreSQL
-- FarmWise — computer vision and RAG for agricultural decision support
-- NEWSBOT AI — news intelligence with fine-tuning, retrieval, forecasting, and
-  explainability
-- Reproducible MLOps — tracked experiments, versioned data, automated delivery,
-  and model monitoring
+- `/` — portfolio overview, selected work, trajectory, toolkit, and contact
+- `/projects` — six detailed AI, data science, and MLOps case studies
+- `/experience` — four complete internship stories
+- `/journey` — IPEIB, the switch to ESPRIT, graduation with excellent mention,
+  the presentation video, and family/friend photographs
+- `/photography` — a 25-frame visual journal
+- `/for-dad` — a respectful memorial with four photographs from the family archive
 
 ## Local development
 
@@ -40,6 +40,9 @@ the static portfolio automatically.
 The expected project URL is:
 
 `https://arfaouiahmed1.github.io/Ahmed-Arfaoui-Portfolio/`
+
+The site contains private family photographs, a personal medical story, and a
+graduation video. Review the public privacy implications before enabling Pages.
 
 ## Contact
 

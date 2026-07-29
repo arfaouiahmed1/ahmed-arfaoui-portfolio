@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import "./pages.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -12,9 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase,
-    title: "Ahmed Arfaoui — AI Engineer",
+    title: "Ahmed Arfaoui — AI Engineer & Photographer",
     description:
-      "AI engineer building agentic systems, browser automation, computer vision products, and end-to-end machine learning platforms.",
+      "AI engineer and photographer building agentic systems, browser automation, computer vision products, and end-to-end machine learning platforms.",
     icons: {
       icon: "/ahmed-arfaoui-portrait.jpg",
       apple: "/ahmed-arfaoui-portrait.jpg",
@@ -22,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Ahmed Arfaoui — Intelligence at Full Throttle",
       description:
-        "Agentic AI, browser automation, data science, and machine learning products engineered for measurable performance.",
+        "AI engineering, photography, resilience, and machine learning products built for measurable performance.",
       type: "website",
       images: ["/og.png"],
     },
