@@ -70,6 +70,16 @@ test("projects and internships expose every detailed case", async () => {
   for (const company of ["Soft Stars", "VERMEG", "ESPRIT", "CMR Tunisie"]) {
     assert.match(experience, new RegExp(company));
   }
+  for (const logo of [
+    "soft-stars.jpg",
+    "vermeg.jpg",
+    "esprit.svg",
+    "cmr-tunisie.jpg",
+  ]) {
+    assert.match(experience, new RegExp(`/companies/${logo}`));
+  }
+  assert.match(experience, /class="company-mark"/);
+  assert.match(experience, /Official profile/);
 });
 
 test("journey includes the graduation film, mother, and excellent mention", async () => {
