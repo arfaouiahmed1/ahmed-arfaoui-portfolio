@@ -86,6 +86,9 @@ test("journey includes the graduation film, mother, and excellent mention", asyn
   const html = await htmlFor("/journey");
   assert.match(html, /IPEIB/);
   assert.match(html, /excellent mention/i);
+  assert.match(html, /education\/ipeib\.png/);
+  assert.match(html, /education\/esprit\.png/);
+  assert.match(html, /class="education-mark"/);
   assert.match(html, /graduation-presentation\.mp4/);
   assert.match(html, /graduation-with-mom-and-friends\.webp/);
   assert.match(html, /my mother and friends/i);

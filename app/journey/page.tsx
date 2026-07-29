@@ -37,6 +37,21 @@ export default function JourneyPage() {
       <section className="journey-sectors section-shell">
         <article>
           <span>SECTOR 01</span>
+          <div className="education-mark">
+            <img
+              src="/education/ipeib.png"
+              alt="IPEIB logo"
+              width="948"
+              height="762"
+              loading="lazy"
+              decoding="async"
+            />
+            <div>
+              <small>INSTITUTION 01</small>
+              <strong>IPEIB</strong>
+              <p>Preparatory cycle</p>
+            </div>
+          </div>
           <h2>IPEIB: WHEN EFFORT DID NOT LOOK LIKE PROGRESS</h2>
           <p>
             Preparatory school at IPEIB was difficult for me. I struggled, I
@@ -51,6 +66,21 @@ export default function JourneyPage() {
         </article>
         <article>
           <span>SECTOR 02</span>
+          <div className="education-mark">
+            <img
+              src="/education/esprit.png"
+              alt="ESPRIT Honoris United Universities logo"
+              width="339"
+              height="160"
+              loading="lazy"
+              decoding="async"
+            />
+            <div>
+              <small>INSTITUTION 02</small>
+              <strong>ESPRIT</strong>
+              <p>Software engineering and data</p>
+            </div>
+          </div>
           <h2>THE SWITCH: CHOOSING ESPRIT AND STARTING AGAIN</h2>
           <p>
             Moving to ESPRIT was not erasing what came before. It was a decision
