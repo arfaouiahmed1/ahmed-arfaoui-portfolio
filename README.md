@@ -31,6 +31,17 @@ Open `http://localhost:3000`.
 npm test
 ```
 
+## Security and privacy
+
+The portfolio has no forms, authentication, analytics, cookies, database, or
+third-party JavaScript. Hosted responses add a restrictive Content Security
+Policy, anti-framing, MIME-sniffing, referrer, browser-permission, opener, and
+HTTPS transport protections. The static GitHub Pages export removes runtime
+scripts and applies an even stricter script-free policy.
+
+See [SECURITY.md](SECURITY.md) for responsible disclosure and the public
+security model.
+
 ## GitHub Pages
 
 The repository includes `.github/workflows/deploy-pages.yml`. Once GitHub Pages

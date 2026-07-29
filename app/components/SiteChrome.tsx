@@ -29,7 +29,7 @@ export function SiteHeader() {
         className="header-cta"
         href="/Ahmed-Arfaoui-CV.pdf"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         Download CV <span aria-hidden="true">↓</span>
       </a>
@@ -45,7 +45,10 @@ export function SiteFooter() {
       </div>
       <p>AHMED ARFAOUI · AI & DATA SCIENCE ENGINEER</p>
       <p>DESIGNED WITH CURIOSITY · BUILT IN TUNIS</p>
-      <a href="#top">BACK TO POLE ↑</a>
+      <nav className="footer-links" aria-label="Security and page controls">
+        <a href="/.well-known/security.txt">SECURITY</a>
+        <a href="#top">BACK TO POLE ↑</a>
+      </nav>
     </footer>
   );
 }

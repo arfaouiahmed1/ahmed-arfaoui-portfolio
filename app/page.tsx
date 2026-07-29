@@ -309,13 +309,13 @@ export default function Home() {
             <a href="mailto:ahmedarfaoui2000@gmail.com">
               EMAIL <Arrow />
             </a>
-            <a href="https://www.linkedin.com/in/ahmedarfaoui99/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/ahmedarfaoui99/" target="_blank" rel="noopener noreferrer">
               LINKEDIN <Arrow />
             </a>
-            <a href="https://github.com/arfaouiahmed1" target="_blank" rel="noreferrer">
+            <a href="https://github.com/arfaouiahmed1" target="_blank" rel="noopener noreferrer">
               GITHUB <Arrow />
             </a>
-            <a href="https://www.kaggle.com/ahmedarfaoui99" target="_blank" rel="noreferrer">
+            <a href="https://www.kaggle.com/ahmedarfaoui99" target="_blank" rel="noopener noreferrer">
               KAGGLE <Arrow />
             </a>
           </div>

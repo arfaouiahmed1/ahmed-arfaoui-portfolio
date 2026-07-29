@@ -1144,6 +1144,12 @@ footer a {
   border-bottom: 1px solid var(--paper);
 }
 
+.footer-links {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);

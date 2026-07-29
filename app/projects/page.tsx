@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                   ))}
                 </div>
                 {project.href && (
-                  <a href={project.href} target="_blank" rel="noreferrer">
+                  <a href={project.href} target="_blank" rel="noopener noreferrer">
                     VIEW REPOSITORY <Arrow />
                   </a>
                 )}

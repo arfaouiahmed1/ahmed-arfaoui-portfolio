@@ -6,6 +6,20 @@ const root = process.cwd();
 const output = path.join(root, "out");
 const projectBase = "/Ahmed-Arfaoui-Portfolio/";
 const routes = ["/", "/projects", "/experience", "/journey", "/photography", "/for-dad"];
+const staticContentSecurityPolicy = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-src 'none'",
+  "form-action 'self'",
+  "img-src 'self' data: blob:",
+  "media-src 'self'",
+  "font-src 'self' data:",
+  "style-src 'self' 'unsafe-inline'",
+  "script-src 'none'",
+  "connect-src 'none'",
+  "manifest-src 'self'",
+].join("; ");
 const workerUrl = pathToFileURL(path.join(root, "dist/server/index.js"));
 workerUrl.searchParams.set("export", Date.now().toString());
 
@@ -39,6 +53,14 @@ async function renderRoute(route) {
   return (await response.text())
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link\b(?=[^>]*rel=["']modulepreload["'])[^>]*>/gi, "")
+    .replace(
+      /<meta\b(?=[^>]*http-equiv=["']Content-Security-Policy["'])[^>]*>/gi,
+      "",
+    )
+    .replace(
+      "<head>",
+      `<head><meta http-equiv="Content-Security-Policy" content="${staticContentSecurityPolicy}">`,
+    )
     .replaceAll('href="/', `href="${projectBase}`)
     .replaceAll('src="/', `src="${projectBase}`)
     .replaceAll('poster="/', `poster="${projectBase}`)

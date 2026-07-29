@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 import "./pages.css";
+import { browserContentSecurityPolicy } from "./security";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -44,6 +45,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content={browserContentSecurityPolicy}
+        />
+        <meta name="referrer" content="no-referrer" />
+      </head>
       <body>{children}</body>
     </html>
   );

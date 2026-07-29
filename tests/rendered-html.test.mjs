@@ -112,3 +112,34 @@ test("public contact and navigation routes are present", async () => {
   assert.match(html, /github\.com\/arfaouiahmed1/);
   assert.match(html, /linkedin\.com\/in\/ahmedarfaoui99/);
 });
+
+test("hosted responses enforce the portfolio security policy", async () => {
+  const response = await render("/");
+  assert.equal(response.status, 200);
+
+  const csp = response.headers.get("content-security-policy") ?? "";
+  assert.match(csp, /default-src 'self'/);
+  assert.match(csp, /object-src 'none'/);
+  assert.match(csp, /frame-ancestors 'none'/);
+  assert.match(csp, /form-action 'self'/);
+  assert.equal(response.headers.get("x-frame-options"), "DENY");
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(response.headers.get("referrer-policy"), "no-referrer");
+  assert.equal(response.headers.get("cross-origin-opener-policy"), "same-origin");
+  assert.match(
+    response.headers.get("permissions-policy") ?? "",
+    /camera=\(\), microphone=\(\), geolocation=\(\)/,
+  );
+  assert.equal(
+    response.headers.get("strict-transport-security"),
+    "max-age=31536000",
+  );
+
+  const html = await response.text();
+  assert.match(html, /http-equiv="Content-Security-Policy"/i);
+  assert.match(html, /name="referrer" content="no-referrer"/i);
+  assert.doesNotMatch(
+    html,
+    /target="_blank"(?![^>]*rel="noopener noreferrer")/i,
+  );
+});
