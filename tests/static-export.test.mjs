@@ -4,7 +4,7 @@ import test from "node:test";
 
 const rootUrl = new URL("../out/", import.meta.url);
 
-test("the GitHub Pages export is script-free and locked to local content", async () => {
+test("the static export is script-free and locked to local content", async () => {
   const html = await readFile(new URL("index.html", rootUrl), "utf8");
 
   assert.doesNotMatch(html, /<script\b/i);
@@ -19,16 +19,4 @@ test("the GitHub Pages export is script-free and locked to local content", async
     html,
     /target="_blank"(?![^>]*rel="noopener noreferrer")/i,
   );
-});
-
-test("the public vulnerability reporting file ships with the export", async () => {
-  const securityText = await readFile(
-    new URL(".well-known/security.txt", rootUrl),
-    "utf8",
-  );
-
-  assert.match(securityText, /^Contact: mailto:/m);
-  assert.match(securityText, /^Expires: /m);
-  assert.match(securityText, /^Canonical: https:\/\//m);
-  assert.match(securityText, /^Preferred-Languages: /m);
 });

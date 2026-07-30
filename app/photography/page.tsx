@@ -26,9 +26,9 @@ export default function PhotographyPage() {
             THE <em>in-between.</em>
           </h1>
           <p>
-            Weather changing. Roads disappearing. A person standing still while
-            traffic moves. Photography is how I practice attention—the same
-            instinct I bring to data and engineering.
+            Most of these photos are simple moments I noticed around Tunisia:
+            changing weather, empty roads, street lights, friends, and places I
+            did not want to forget.
           </p>
         </div>
       </section>

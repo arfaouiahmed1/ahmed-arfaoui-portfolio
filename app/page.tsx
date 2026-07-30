@@ -47,9 +47,8 @@ export default function Home() {
 
           <div className="hero-bottom reveal delay-2">
             <p>
-              I build AI systems that can <strong>observe</strong>,{" "}
-              <strong>reason</strong>, and <strong>act</strong>—then make the
-              evidence visible enough for humans to trust.
+              I build AI systems that use tools, browse the web, and leave
+              enough evidence behind for people to check what happened.
             </p>
             <a className="circle-link" href="/projects" aria-label="Explore projects">
               <span>EXPLORE</span>
@@ -136,8 +135,8 @@ export default function Home() {
             </h2>
           </div>
           <p>
-            Six systems shaped by real constraints, measurable outcomes, and the
-            belief that a strong model is only the start of a strong product.
+            These are six projects I spent real time on. I included what I
+            built, the results I measured, and the tools I actually used.
           </p>
         </div>
 
@@ -190,10 +189,9 @@ export default function Home() {
             strategies, and the tiny decisions that change a Formula 1 race.
           </p>
           <p>
-            Photography taught me the other half: frame the right question,
-            notice what others miss, and make complexity legible. Those instincts
-            now shape everything from autonomous browser agents to computer
-            vision products and reproducible ML pipelines.
+            Photography made me more patient and more attentive to small
+            details. I bring that same habit to my work, whether I am debugging
+            a browser agent, training a vision model, or building an ML pipeline.
           </p>
         </div>
 
@@ -207,8 +205,8 @@ export default function Home() {
           <div className="photo-card-overlay">
             <p>APERTURE / A–01</p>
             <blockquote>
-              “Good engineering and good photography begin the same way:
-              <strong> pay attention.</strong>”
+              “I like engineering and photography for the same reason:
+              <strong> both make you pay attention.</strong>”
             </blockquote>
             <span>
               OPEN THE VISUAL JOURNAL <Arrow />
@@ -224,8 +222,8 @@ export default function Home() {
             <h2>THE RACING LINE.</h2>
           </div>
           <p>
-            A path through business intelligence, applied data science,
-            generative AI, and production-grade agentic systems.
+            I started with business intelligence, moved into machine learning,
+            and kept going until I was building agentic systems.
           </p>
         </div>
 
@@ -277,7 +275,7 @@ export default function Home() {
         <div className="toolkit-title">
           <p className="eyebrow">05 / PIT WALL</p>
           <h2>THE TOOLKIT.</h2>
-          <p>Chosen for the problem. Connected for the outcome.</p>
+          <p>Tools I have used across projects, internships, and my final-year work.</p>
         </div>
         <div className="tool-cloud">
           {tools.map((tool, index) => (
@@ -301,9 +299,8 @@ export default function Home() {
         </h2>
         <div className="contact-bottom">
           <p>
-            I’m looking for ambitious AI engineering work—especially agentic
-            systems, applied machine learning, and products where intelligence
-            meets a real operational challenge.
+            I am looking for AI engineering work, especially around agents,
+            applied machine learning, and products that solve a real problem.
           </p>
           <div className="contact-links">
             <a href="mailto:ahmedarfaoui2000@gmail.com">

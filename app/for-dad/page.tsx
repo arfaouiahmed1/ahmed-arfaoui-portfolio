@@ -30,22 +30,19 @@ export default function ForDadPage() {
       </section>
 
       <section className="memorial-story section-shell">
-        <p className="memorial-dropcap">My father struggled through brain strokes.</p>
+        <p className="memorial-dropcap">My father went through several brain strokes.</p>
         <p>
-          Before he died, Alzheimer’s increasingly stood between him and the
-          memories, words, and connections that had shaped his life. Watching
-          that happen was a lesson in fragility that no classroom could teach.
+          In his final years, Alzheimer’s affected what he remembered and how he
+          connected with us. Watching that happen was painful for my family.
         </p>
         <p>
-          I do not want this page to reduce him to illness. It is here because
-          his life, his struggle, and his place in mine deserve space. The
-          details I carry are personal; what I can say publicly is that I
-          continue with part of his story inside me.
+          I do not want this page to be only about his illness. He was my father
+          long before any of that happened. I wanted to keep a small place here
+          for him and for a few of the photos my family still has.
         </p>
         <blockquote>
-          Four photographs cannot contain a whole life, but they can keep its
-          presence visible: a younger face, a familiar room, a day outside, and
-          the person my family remembers across all of them.
+          These four photographs are not his whole life. They are simply four
+          moments in it that I wanted to keep close.
         </blockquote>
       </section>
 
@@ -59,7 +56,7 @@ export default function ForDadPage() {
           <figcaption>
             <span>FRAME 01 / FAMILY ARCHIVE</span>
             <h2>Younger years</h2>
-            <p>A life existed long before illness entered the frame.</p>
+            <p>My father when he was younger.</p>
           </figcaption>
         </figure>
         <figure className="memory-photo">
@@ -71,7 +68,7 @@ export default function ForDadPage() {
           <figcaption>
             <span>FRAME 02 / AMONG PEOPLE</span>
             <h2>A familiar presence</h2>
-            <p>One ordinary moment preserved because ordinary moments become precious.</p>
+            <p>An old photo of him among colleagues and friends.</p>
           </figcaption>
         </figure>
         <figure className="memory-photo">
@@ -83,7 +80,7 @@ export default function ForDadPage() {
           <figcaption>
             <span>FRAME 03 / AT HOME</span>
             <h2>The red chechia</h2>
-            <p>His expression, his gesture, and a room the family knows.</p>
+            <p>A photo of him at home in his red chechia.</p>
           </figcaption>
         </figure>
         <figure className="memory-photo memory-photo-wide">
@@ -95,7 +92,7 @@ export default function ForDadPage() {
           <figcaption>
             <span>FRAME 04 / AN AFTERNOON OUT</span>
             <h2>Still part of the world</h2>
-            <p>A difficult chapter, remembered with tenderness and dignity.</p>
+            <p>One of our afternoons outside during a difficult period.</p>
           </figcaption>
         </figure>
       </section>
@@ -108,9 +105,9 @@ export default function ForDadPage() {
           height="2295"
         />
         <p>
-          For the strength it took to keep going.
+          For Dad.
           <br />
-          For everything remembered—even when memory itself became difficult.
+          I still carry you with me.
         </p>
       </section>
     </PageShell>

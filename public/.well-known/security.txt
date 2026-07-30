@@ -1,5 +1,0 @@
-Contact: mailto:ahmedarfaoui2000@gmail.com
-Expires: 2027-07-29T00:00:00.000Z
-Canonical: https://arfaouiahmed1.github.io/Ahmed-Arfaoui-Portfolio/.well-known/security.txt
-Preferred-Languages: en, fr
-Policy: https://github.com/arfaouiahmed1/Ahmed-Arfaoui-Portfolio/security/policy

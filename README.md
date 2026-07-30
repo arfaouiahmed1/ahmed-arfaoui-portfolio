@@ -44,30 +44,27 @@ To run the build and content checks:
 npm test
 ```
 
-## GitHub Pages
+## Deployment
 
-The repository includes a GitHub Actions workflow for deployment. After GitHub
-Pages is configured to use **GitHub Actions**, every push to `main` builds and
-publishes the latest version.
+The portfolio is currently live on Vercel:
 
-The expected address is:
+`https://ahmed-arfaoui-portfolio.vercel.app`
 
-`https://arfaouiahmed1.github.io/Ahmed-Arfaoui-Portfolio/`
+I kept the Vercel export command in the project so I can publish the exact same
+static build that I test locally:
+
+```bash
+npm run export:vercel
+```
+
+The repository also includes a GitHub Pages workflow. If I decide to use it
+later, setting Pages to **GitHub Actions** is enough for every push to `main` to
+build and publish the latest version.
 
 One important note before publishing: the site includes family photographs, a
 graduation video, and the story of my father's illness. Once GitHub Pages is
 enabled, those files become public. I want that decision to be made
 deliberately.
-
-## Security and privacy
-
-I kept the site static on purpose. There is no database, login, contact form,
-tracking, advertising, or third-party JavaScript. The hosted version also uses
-browser security policies, and the GitHub Pages version is exported without
-runtime JavaScript.
-
-If you find a security issue, please read [SECURITY.md](SECURITY.md) and contact
-me privately.
 
 ## Contact
 

@@ -37,8 +37,8 @@ jobs:
       - name: Export static GitHub Pages bundle
         run: npm run export:pages
 
-      - name: Verify static security controls
-        run: node --test tests/static-security.test.mjs
+      - name: Verify static export
+        run: node --test tests/static-export.test.mjs
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

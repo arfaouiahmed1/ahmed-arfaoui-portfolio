@@ -47,6 +47,12 @@ test("home renders Ahmed's complete multi-page portfolio entry point", async () 
   assert.match(html, /FAILURE DID NOT/);
   assert.match(html, /Ahmed-Arfaoui-CV\.pdf/);
   assert.match(html, /photography\/15-horizon-and-me\.webp/);
+  assert.ok(
+    (html.match(/\/aa-dot-logo\.png/g) ?? []).length >= 3,
+    "the AA dot mark should be used throughout the shell",
+  );
+  assert.doesNotMatch(html, />\s*SECURITY\s*</i);
+  assert.doesNotMatch(html, /\.well-known\/security\.txt/i);
   assert.doesNotMatch(html, /Your site is taking shape|codex-preview|SkeletonPreview/);
 });
 
@@ -65,6 +71,10 @@ test("projects and internships expose every detailed case", async () => {
   assert.match(projects, /THE CHALLENGE/);
   assert.match(projects, /THE APPROACH/);
   assert.match(projects, /THE OUTCOME/);
+  assert.match(projects, /class="page-telemetry"/);
+  assert.match(projects, />S1</);
+  assert.match(projects, />S2</);
+  assert.match(projects, />S3</);
 
   const experience = await htmlFor("/experience");
   for (const company of ["Soft Stars", "VERMEG", "ESPRIT", "CMR Tunisie"]) {
@@ -80,6 +90,7 @@ test("projects and internships expose every detailed case", async () => {
   }
   assert.match(experience, /class="company-mark"/);
   assert.match(experience, /Official profile/);
+  assert.match(experience, /class="page-telemetry"/);
 });
 
 test("journey includes the graduation film, mother, and excellent mention", async () => {
@@ -126,7 +137,7 @@ test("public contact and navigation routes are present", async () => {
   assert.match(html, /linkedin\.com\/in\/ahmedarfaoui99/);
 });
 
-test("hosted responses enforce the portfolio security policy", async () => {
+test("hosted responses preserve the intended browser policies", async () => {
   const response = await render("/");
   assert.equal(response.status, 200);
 

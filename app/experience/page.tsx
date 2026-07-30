@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- local company marks are small static assets included in the GitHub Pages export */
 import type { Metadata } from "next";
-import { PageShell } from "../components/SiteChrome";
+import { HeroTelemetry, PageShell } from "../components/SiteChrome";
 import { internships } from "../content";
 
 const companyProfiles: Record<
@@ -38,6 +38,7 @@ export default function ExperiencePage() {
   return (
     <PageShell>
       <section className="page-hero page-hero-experience">
+        <HeroTelemetry lap="LAP 04 / 04" />
         <p className="eyebrow">EXPERIENCE / FOUR CHAPTERS</p>
         <h1>
           LEARNING BY
@@ -45,8 +46,8 @@ export default function ExperiencePage() {
           <em>shipping.</em>
         </h1>
         <p>
-          From business intelligence and forecasting to enterprise generative
-          AI and autonomous browser systems—each internship moved the boundary.
+          Four internships took me from Power BI and forecasting to machine
+          learning, generative AI, and autonomous browser agents.
         </p>
       </section>
 

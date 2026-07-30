@@ -4,13 +4,13 @@ export const projects = [
     title: "Open Web Catcher",
     category: "Agentic AI · Browser automation",
     summary:
-      "A reviewable multi-agent platform that navigates dynamic websites, activates media players, traces iframe chains, and converts browser evidence into structured intelligence.",
+      "My graduation project: a multi-agent system that browses dynamic websites, handles media players and iframes, and keeps evidence from each run.",
     challenge:
       "Modern streaming pages are hostile to conventional crawlers: content is loaded dynamically, embedded several frames deep, interrupted by pop-ups, and frequently changed.",
     approach:
-      "I evolved the system from an n8n and Puppeteer prototype into a typed platform where specialized agents observe the page, choose browser tools through MCP, preserve evidence, and coordinate their loops with LangGraph.",
+      "I started with an n8n and Puppeteer prototype, then rebuilt it around specialized agents, MCP browser tools, LangGraph, FastAPI, and a Next.js operator console.",
     outcome:
-      "The result is an inspectable workflow with reusable site memory, operator-facing traces, evaluation tooling, and strong measured tool reliability across a broad website set.",
+      "The current system stores reusable site memory, exposes traces for every run, and includes evaluation tools instead of relying only on demos.",
     proof: ["150+ sites reached", "97.6% tool-call success", "126 evaluated runs"],
     stack: ["LangGraph", "LangChain", "MCP", "FastAPI", "Next.js", "PostgreSQL", "Puppeteer"],
   },
@@ -19,13 +19,13 @@ export const projects = [
     title: "NEWSBOT AI",
     category: "NLP · Explainable intelligence",
     summary:
-      "A news intelligence engine for contextual summarization, bias and sentiment analysis, trend forecasting, and explanations that show what shaped each result.",
+      "A news analysis project for summaries, sentiment, bias analysis, trend forecasting, and explanations of model predictions.",
     challenge:
       "News analysis becomes much less useful when readers cannot understand why a model labeled an article, which context informed a summary, or how a trend was inferred.",
     approach:
-      "I combined semantic search, instruction-tuned language models, LoRA adaptation, forecasting, and two complementary explainability methods so the product could retrieve context and expose model reasoning signals.",
+      "I combined semantic search, instruction-tuned language models, LoRA fine-tuning, forecasting, LIME, and SHAP in one workflow.",
     outcome:
-      "The project became a single analytical workflow spanning retrieval, generation, classification, explainability, and forward-looking trend signals.",
+      "The result brought retrieval, generation, classification, explanations, and forecasting into one application.",
     proof: ["LoRA fine-tuning", "LIME + SHAP", "Contextual semantic search"],
     stack: ["FAISS", "FLAN-T5", "Mistral", "Sentence Transformers", "LIME", "SHAP"],
   },
@@ -34,13 +34,13 @@ export const projects = [
     title: "FarmWise",
     category: "Computer vision · Agricultural AI",
     summary:
-      "An end-to-end advisory platform combining crop diagnostics, weed detection, satellite vegetation signals, and a RAG assistant grounded in more than 1,000 documents.",
+      "An agricultural platform that combines crop-disease diagnosis, weed detection, satellite vegetation data, and a RAG assistant built from more than 1,000 documents.",
     challenge:
       "Agricultural decisions rarely depend on one signal. Farmers need disease identification, field-level vegetation context, weed detection, and practical guidance to work together.",
     approach:
-      "I connected ResNet diagnostics, YOLOv8 detection, NDVI signals, and a document-grounded assistant behind a unified Next.js and Django experience.",
+      "I connected ResNet, YOLOv8, NDVI data, and the document assistant through a Next.js frontend and Django backend.",
     outcome:
-      "FarmWise reached strong vision benchmarks while turning several separate AI capabilities into a coherent decision-support product.",
+      "The vision models reached 95% disease accuracy and 88% YOLOv8 mAP, and the separate features worked together in one product.",
     proof: ["95% disease accuracy", "88% YOLOv8 mAP", "1,000+ RAG documents"],
     stack: ["ResNet", "YOLOv8", "RAG", "Next.js", "Django", "NDVI"],
     href: "https://github.com/arfaouiahmed1/Data-Farmers-FarmWise-4DS3",
@@ -50,13 +50,13 @@ export const projects = [
     title: "End-to-End MLOps",
     category: "ML engineering · Delivery",
     summary:
-      "A reproducible model lifecycle with versioned data, tracked experiments, containerized serving, automated delivery, and live drift monitoring.",
+      "A complete ML workflow with versioned data, tracked experiments, a containerized API, automated delivery, and drift monitoring.",
     challenge:
       "A model is not production-ready if its data cannot be reproduced, its experiments cannot be compared, or its behavior cannot be monitored after release.",
     approach:
-      "I designed the workflow around DVC and MLflow for lineage, FastAPI and Docker for serving, CI/CD for repeatable releases, and monitoring for model and data health.",
+      "I used DVC and MLflow for data and experiment tracking, FastAPI and Docker for serving, CI/CD for releases, and Elastic for monitoring.",
     outcome:
-      "The project shortened delivery cycles while making every important artifact—from data to deployment—reviewable and reproducible.",
+      "The workflow made runs reproducible and reduced the time needed to move a model from an experiment to a deployed service.",
     proof: ["80% faster delivery", "Real-time monitoring", "Reproducible runs"],
     stack: ["MLflow", "DVC", "Docker", "FastAPI", "CI/CD", "Elastic"],
   },
@@ -65,13 +65,13 @@ export const projects = [
     title: "Speech Emotion Recognition",
     category: "Deep learning · Audio intelligence",
     summary:
-      "An audio classification system that learns emotional cues from speech and packages the result as a usable inference workflow.",
+      "A deep-learning project that classifies emotion from speech recordings.",
     challenge:
       "Emotion is expressed through subtle changes in pitch, energy, rhythm, and spectral texture, all of which vary across speakers and recording conditions.",
     approach:
-      "I built a preprocessing and feature pipeline for audio clips, trained deep learning models on time-frequency representations, and evaluated them with class-aware metrics.",
+      "I cleaned the audio, built the feature pipeline, trained models on time-frequency representations, and compared the results with class-aware metrics.",
     outcome:
-      "The final system achieved 94.3% accuracy and gave me practical experience turning raw audio into a robust learned representation.",
+      "The final model reached 94.3% accuracy. It was also my first serious project working with raw audio and signal processing.",
     proof: ["94.3% accuracy", "Audio feature engineering", "Deep neural classification"],
     stack: ["Python", "TensorFlow", "Librosa", "CNN", "Signal Processing"],
   },
@@ -80,13 +80,13 @@ export const projects = [
     title: "Telecom Churn Prediction",
     category: "Predictive analytics · Customer intelligence",
     summary:
-      "A customer-retention workflow that identifies likely churners and translates model output into actionable business segments.",
+      "A churn-prediction project that identifies customers who are likely to leave and groups them for retention work.",
     challenge:
       "Churn prediction is valuable only when the model balances accuracy with interpretability and helps teams decide whom to contact and why.",
     approach:
-      "I prepared customer data, compared supervised models, analyzed influential features, and structured the predictions for business-facing exploration.",
+      "I prepared the customer data, compared supervised models, analyzed feature importance, and built a Power BI view of the results.",
     outcome:
-      "The work connected statistical modeling with an operational retention question and reinforced my interest in explainable, decision-ready data products.",
+      "The project helped me understand how to present model output in a way that a business team can actually use.",
     proof: ["Model comparison", "Feature importance", "Retention segmentation"],
     stack: ["Python", "Scikit-learn", "Pandas", "Power BI", "Machine Learning"],
   },
@@ -99,7 +99,7 @@ export const internships = [
     role: "AI & Agentic Systems Engineer · Graduation Internship",
     company: "Soft Stars",
     context:
-      "My final-year internship and the most ambitious engineering chapter of my studies.",
+      "This was my final-year internship and the project I spent the most time building.",
     work: [
       "Designed Open Web Catcher as a multi-agent browser intelligence platform.",
       "Moved the project from an n8n/Puppeteer prototype toward a traceable LangChain, LangGraph, MCP, FastAPI, and Next.js architecture.",
@@ -107,7 +107,7 @@ export const internships = [
       "Measured real execution quality instead of relying only on demos.",
     ],
     result:
-      "The experience brought together agentic AI, backend engineering, browser automation, data evaluation, and product thinking in one production-minded system.",
+      "This internship brought together agentic AI, backend work, browser automation, evaluation, and frontend work in the same system.",
   },
   {
     number: "02",
@@ -115,14 +115,14 @@ export const internships = [
     role: "Data Science Intern",
     company: "VERMEG",
     context:
-      "Applied generative AI to a difficult legacy-modernization problem in financial software.",
+      "I worked on using generative AI to automate part of a legacy-modernization process.",
     work: [
-      "Automated the conversion of more than 50 legacy security configurations.",
+      "Automated the conversion of more than 50 legacy platform configurations.",
       "Used Spring AI to structure the transformation workflow and connect language-model capabilities to enterprise code.",
       "Validated generated results against expected configurations and iterated on failure cases.",
     ],
     result:
-      "The system reached 90% conversion accuracy and showed me how generative AI can reduce repetitive migration work when it is surrounded by validation.",
+      "The system reached 90% conversion accuracy. The main lesson for me was that generated output is useful only when the validation around it is solid.",
   },
   {
     number: "03",
@@ -130,7 +130,7 @@ export const internships = [
     role: "Data Science Intern",
     company: "ESPRIT",
     context:
-      "A focused machine-learning internship centered on clustering quality and serving performance.",
+      "I compared clustering methods and then worked on serving the selected model efficiently.",
     work: [
       "Benchmarked six clustering approaches on the same analytical problem.",
       "Compared their behavior with appropriate internal validation metrics.",
@@ -138,7 +138,7 @@ export const internships = [
       "Optimized the inference path to stay below 200 ms.",
     ],
     result:
-      "This internship strengthened my habit of comparing methods empirically and treating deployment latency as part of model quality.",
+      "This internship made me more disciplined about comparing methods with the same metrics and treating API latency as part of the result.",
   },
   {
     number: "04",
@@ -146,7 +146,7 @@ export const internships = [
     role: "Business Intelligence & Data Science Intern",
     company: "CMR Tunisie",
     context:
-      "My first professional bridge between reporting, forecasting, and business decisions.",
+      "This was my first internship working with business data, dashboards, and forecasting.",
     work: [
       "Prepared and modeled commercial data for analysis.",
       "Built Power BI dashboards for sales visibility.",
@@ -154,7 +154,7 @@ export const internships = [
       "Presented trends and projections in a business-readable form.",
     ],
     result:
-      "The internship taught me that a correct model still needs a clear visual story before it can support a decision.",
+      "I learned that even a correct forecast is not very useful if the people reading it cannot understand the story behind it.",
   },
 ];
 

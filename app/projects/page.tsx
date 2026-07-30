@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Arrow, PageShell } from "../components/SiteChrome";
+import { Arrow, HeroTelemetry, PageShell } from "../components/SiteChrome";
 import { projects } from "../content";
 
 export const metadata: Metadata = {
@@ -11,6 +11,7 @@ export default function ProjectsPage() {
   return (
     <PageShell>
       <section className="page-hero page-hero-projects">
+        <HeroTelemetry lap="LAP 01 / 06" />
         <p className="eyebrow">PROJECT ARCHIVE / 01—06</p>
         <h1>
           SYSTEMS WITH
@@ -18,8 +19,8 @@ export default function ProjectsPage() {
           <em>evidence.</em>
         </h1>
         <p>
-          Not a list of technologies. Six problems, six engineering approaches,
-          and the outcomes that made each project worth building.
+          Here are six projects I worked on, what each one was trying to solve,
+          how I approached it, and what came out of the work.
         </p>
       </section>
 

@@ -27,9 +27,9 @@ export default function JourneyPage() {
             I <em>continued.</em>
           </h1>
           <p>
-            This is not a straight-line success story. It is the story of
-            struggling at IPEIB, refusing to surrender, changing direction, and
-            eventually graduating from ESPRIT with an excellent mention.
+            I struggled at IPEIB and failed more than once. I did not want that
+            to be the end of my studies, so I changed direction, joined ESPRIT,
+            and eventually graduated with an excellent mention.
           </p>
         </div>
       </section>
@@ -54,14 +54,13 @@ export default function JourneyPage() {
           </div>
           <h2>IPEIB: WHEN EFFORT DID NOT LOOK LIKE PROGRESS</h2>
           <p>
-            Preparatory school at IPEIB was difficult for me. I struggled, I
-            failed more than once, and I had to confront the gap between how
-            hard I was trying and the results I was seeing.
+            Preparatory school at IPEIB was hard for me. I was putting in the
+            work, but the results were not there, and I failed more than once.
           </p>
           <p>
-            Those years hurt my confidence, but they also forced me to learn
-            endurance. Failure stopped being a verdict and became information:
-            something in the route had to change, not the destination.
+            It affected my confidence. It also made me accept that trying harder
+            in exactly the same way was not enough. I still wanted to become an
+            engineer, but I needed a different route.
           </p>
         </article>
         <article>
@@ -83,9 +82,9 @@ export default function JourneyPage() {
           </div>
           <h2>THE SWITCH: CHOOSING ESPRIT AND STARTING AGAIN</h2>
           <p>
-            Moving to ESPRIT was not erasing what came before. It was a decision
-            to keep going with a different environment, a clearer sense of what
-            interested me, and more maturity about how I learn.
+            Moving to ESPRIT was my way of starting again without pretending
+            the years before it never happened. I understood myself better and
+            had a clearer idea of what I wanted to study.
           </p>
           <p>
             I began connecting software engineering with data. Formula 1 had
@@ -98,29 +97,29 @@ export default function JourneyPage() {
           <span>SECTOR 03</span>
           <h2>BUILDING: FROM DATA PROJECTS TO AGENTIC AI</h2>
           <p>
-            Project by project, I moved from dashboards and classical machine
-            learning into computer vision, NLP, MLOps, generative AI, and
-            eventually autonomous browser agents.
+            I started with dashboards and classical machine learning. Later I
+            worked on computer vision, NLP, MLOps, generative AI, and finally
+            autonomous browser agents.
           </p>
           <p>
-            Internships made the work real: forecasts had audiences, APIs had
-            latency, generated configurations needed validation, and agents
-            needed evidence. I was no longer trying only to pass. I was learning
-            how to build.
+            The internships made the difference between a school project and
+            work people could actually use much clearer to me. I had to think
+            about latency, validation, users, and whether the result really held
+            up outside a demo.
           </p>
         </article>
         <article>
           <span>SECTOR 04</span>
           <h2>THE FINISH LINE: EXCELLENT MENTION</h2>
           <p>
-            The graduation result mattered because of the road behind it. I
-            finished with an excellent mention—not because the earlier failures
-            disappeared, but because I did not let them decide the ending.
+            Graduating with an excellent mention meant a lot because I knew how
+            close I had come to giving up. The earlier failures did not
+            disappear, but they no longer defined what I could finish.
           </p>
           <p>
-            My mother and my friends were there. Their presence in these photos
-            makes the achievement feel complete: the finish line belongs to
-            everyone who kept believing while I rebuilt.
+            My mother and my friends were there for the presentation. I am glad
+            these photos include them because they supported me through the
+            difficult parts, not only the final day.
           </p>
         </article>
       </section>
@@ -136,8 +135,8 @@ export default function JourneyPage() {
             </h2>
           </div>
           <p>
-            The presentation video marks the closing chapter of the degree and
-            the opening chapter of the engineer I am becoming.
+            This is the presentation from my graduation project. It is the
+            moment the degree finally felt real to me.
           </p>
         </div>
         <video
@@ -160,7 +159,7 @@ export default function JourneyPage() {
           />
           <figcaption>
             <span>PORTRAIT 01</span>
-            Me alone—a pause before the next horizon.
+            Me on one of the trips where I took many of the photos on this site.
           </figcaption>
         </figure>
         <figure>
@@ -178,9 +177,9 @@ export default function JourneyPage() {
       </section>
 
       <section className="journey-next section-shell">
-        <p>THE NEXT SECTOR IS OPEN.</p>
-        <h2>THE LESSON WAS NEVER “DO NOT FAIL.”</h2>
-        <h3>IT WAS “DO NOT LET FAILURE MAKE THE FINAL DECISION.”</h3>
+        <p>WHAT I TOOK FROM IT.</p>
+        <h2>FAILING DID NOT MEAN I WAS FINISHED.</h2>
+        <h3>I CHANGED THE ROUTE AND KEPT GOING.</h3>
         <a href="/projects">
           SEE WHAT I BUILT ALONG THE WAY <Arrow />
         </a>

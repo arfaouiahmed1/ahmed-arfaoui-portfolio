@@ -16,15 +16,16 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase,
     title: "Ahmed Arfaoui — AI Engineer & Photographer",
     description:
-      "AI engineer and photographer building agentic systems, browser automation, computer vision products, and end-to-end machine learning platforms.",
+      "My projects, internships, photography, and the road from IPEIB to graduating from ESPRIT.",
     icons: {
-      icon: "/ahmed-arfaoui-portrait.jpg",
-      apple: "/ahmed-arfaoui-portrait.jpg",
+      icon: "/aa-dot-logo.png",
+      shortcut: "/aa-dot-logo.png",
+      apple: "/aa-dot-logo.png",
     },
     openGraph: {
       title: "Ahmed Arfaoui — Intelligence at Full Throttle",
       description:
-        "AI engineering, photography, resilience, and machine learning products built for measurable performance.",
+        "My AI projects, internship experience, photography, and personal journey.",
       type: "website",
       images: ["/og.png"],
     },
@@ -32,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Ahmed Arfaoui — Intelligence at Full Throttle",
       description:
-        "AI engineer building intelligent systems that observe, reason, and act.",
+        "AI engineer, data science graduate, Formula 1 fan, and photographer.",
       images: ["/og.png"],
     },
   };
