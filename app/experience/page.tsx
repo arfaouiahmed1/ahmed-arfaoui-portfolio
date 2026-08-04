@@ -9,44 +9,32 @@ const companyProfiles: Record<
     logo: string;
     alt: string;
     profile: string;
-    visual: string;
-    visualAlt: string;
-    visualFit?: "cover" | "contain";
-    sourceLabel: string;
+    discipline: string;
   }
 > = {
   "Soft Stars": {
     logo: "/companies/soft-stars.jpg",
     alt: "Soft Stars logo",
     profile: "https://www.linkedin.com/company/softstarscom",
-    visual: "/companies/soft-stars-cover.jpg",
-    visualAlt: "Soft Stars company cover artwork",
-    sourceLabel: "COMPANY PROFILE / SOFT STARS",
+    discipline: "AGENTIC SYSTEMS",
   },
   VERMEG: {
-    logo: "/companies/vermeg.svg",
+    logo: "/companies/vermeg.jpg",
     alt: "VERMEG logo",
     profile: "https://www.linkedin.com/company/vermeg",
-    visual: "/companies/vermeg.svg",
-    visualAlt: "VERMEG official brand mark",
-    visualFit: "contain",
-    sourceLabel: "OFFICIAL BRAND / VERMEG",
+    discipline: "GENERATIVE AI",
   },
   ESPRIT: {
     logo: "/companies/esprit.svg",
     alt: "ESPRIT logo",
     profile: "https://www.esprit.tn/",
-    visual: "/education/esprit-campus.jpg",
-    visualAlt: "ESPRIT campus building",
-    sourceLabel: "OFFICIAL CAMPUS / ESPRIT",
+    discipline: "MACHINE LEARNING",
   },
   "CMR Tunisie": {
-    logo: "/companies/cmr.png",
+    logo: "/companies/cmr-tunisie.jpg",
     alt: "CMR, an Amphenol company logo",
     profile: "https://www.cmr-group.com/",
-    visual: "/companies/cmr-work.jpg",
-    visualAlt: "A locomotive featuring CMR engineering systems",
-    sourceLabel: "OFFICIAL FIELD IMAGE / CMR",
+    discipline: "BI & FORECASTING",
   },
 };
 
@@ -178,20 +166,8 @@ export default function ExperiencePage() {
                     aria-label={`Visit ${internship.company}'s official profile`}
                   >
                     <span className="company-mark-label">
-                      TEAM ID / {internship.number}
-                    </span>
-                    <span
-                      className={`company-visual company-visual-${companyProfile.visualFit ?? "cover"}`}
-                    >
-                      <img
-                        src={companyProfile.visual}
-                        alt={companyProfile.visualAlt}
-                        width="1200"
-                        height="700"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <small>{companyProfile.sourceLabel}</small>
+                      <span>TEAM ID / {internship.number}</span>
+                      <span>{companyProfile.discipline}</span>
                     </span>
                     <span className="company-mark-plate">
                       <img

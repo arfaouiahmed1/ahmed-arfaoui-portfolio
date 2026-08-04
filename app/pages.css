@@ -589,85 +589,165 @@
 }
 
 .case-study-list {
-  color: var(--ink);
-  background: var(--paper);
+  padding-top: clamp(56px, 7vw, 104px);
+  padding-bottom: clamp(56px, 7vw, 104px);
+  color: var(--paper);
+  background: #0a0b0c;
 }
 
 .case-study {
+  position: relative;
   display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 4vw;
-  padding: 85px 0;
-  border-top: 1px solid rgba(11, 12, 13, 0.24);
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: clamp(24px, 3vw, 54px);
+  margin-bottom: 22px;
+  padding: clamp(34px, 4vw, 64px);
+  overflow: hidden;
+  border: 1px solid rgba(242, 239, 232, 0.14);
+  background:
+    linear-gradient(120deg, rgba(242, 56, 42, 0.045), transparent 34%),
+    #111315;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
 }
 
-.case-study:first-child {
-  border-top: 0;
+.case-study::after {
+  position: absolute;
+  top: -88px;
+  right: -88px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(242, 56, 42, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(242, 56, 42, 0.018);
+  content: "";
+  pointer-events: none;
+}
+
+.case-study-rail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding-right: 24px;
+  border-right: 1px solid rgba(242, 239, 232, 0.14);
 }
 
 .case-study-rail > span {
+  color: var(--red);
   font-family: var(--display);
-  font-size: clamp(78px, 8vw, 130px);
+  font-size: clamp(46px, 4.2vw, 72px);
   font-weight: 900;
   letter-spacing: -0.08em;
-  line-height: 0.75;
+  line-height: 0.8;
 }
 
 .case-study-rail > p {
-  max-width: 150px;
-  margin-top: 30px;
-  color: var(--red);
-  font-family: var(--display);
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: 0.12em;
-  line-height: 1.5;
+  margin: 48px 0 0;
+  color: rgba(242, 239, 232, 0.46);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
   text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
 .case-study-body h2,
 .internship-title h2 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(56px, 7vw, 115px);
+  font-size: clamp(46px, 5.6vw, 88px);
   font-weight: 900;
   letter-spacing: -0.055em;
   line-height: 0.88;
   text-transform: uppercase;
 }
 
+.case-study-heading {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.case-category {
+  margin: 0 0 13px;
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.case-status {
+  flex: 0 0 auto;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 2px;
+  padding: 8px 10px;
+  border: 1px solid rgba(242, 239, 232, 0.16);
+  color: rgba(242, 239, 232, 0.55);
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.12em;
+}
+
+.case-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.55);
+}
+
 .case-summary {
-  max-width: 1000px;
-  margin: 35px 0 60px;
+  max-width: 880px;
+  margin: 25px 0 36px;
+  color: rgba(242, 239, 232, 0.82);
   font-family: var(--serif);
-  font-size: clamp(24px, 2.3vw, 38px);
+  font-size: clamp(21px, 2vw, 30px);
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.42;
 }
 
 .case-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 10px;
 }
 
 .case-columns > div {
-  padding-top: 20px;
-  border-top: 1px solid rgba(11, 12, 13, 0.3);
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid rgba(242, 239, 232, 0.12);
+  background: rgba(242, 239, 232, 0.025);
 }
 
 .case-columns h3 {
-  margin: 0 0 18px;
+  display: flex;
+  gap: 10px;
+  margin: 0 0 14px;
+  color: rgba(242, 239, 232, 0.9);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+
+.case-columns h3 span {
   color: var(--red);
-  font-family: var(--display);
-  font-size: 10px;
-  letter-spacing: 0.14em;
 }
 
 .case-columns p {
-  color: #555650;
-  font-size: 14px;
-  line-height: 1.75;
+  margin: 0;
+  color: rgba(242, 239, 232, 0.58);
+  font-size: 13px;
+  line-height: 1.68;
 }
 
 .case-footer {
@@ -675,7 +755,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 25px;
   align-items: end;
-  margin-top: 38px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(242, 239, 232, 0.12);
 }
 
 .case-footer .proof-list {
@@ -690,7 +772,8 @@
   grid-column: 2;
   justify-self: end;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--ink);
+  color: var(--paper);
+  border-bottom: 1px solid rgba(242, 239, 232, 0.5);
   font-family: var(--display);
   font-size: 11px;
   font-weight: 800;
@@ -703,25 +786,42 @@
 }
 
 .internship-list {
-  background: #111213;
+  padding-top: clamp(56px, 7vw, 104px);
+  padding-bottom: clamp(56px, 7vw, 104px);
+  background: #0a0b0c;
 }
 
 .internship-card {
+  position: relative;
   display: grid;
-  grid-template-columns: 90px minmax(300px, 0.75fr) 1.25fr;
-  gap: 4vw;
-  padding: 82px 0;
-  border-top: 1px solid var(--line);
+  grid-template-columns: 58px minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(24px, 3vw, 52px);
+  margin-bottom: 22px;
+  padding: clamp(34px, 4vw, 62px);
+  overflow: hidden;
+  border: 1px solid rgba(242, 239, 232, 0.14);
+  background:
+    linear-gradient(120deg, rgba(242, 56, 42, 0.05), transparent 32%),
+    #111315;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
 }
 
-.internship-card:first-child {
-  border-top: 0;
+.internship-card::after {
+  position: absolute;
+  right: -64px;
+  bottom: -64px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(204, 255, 0, 0.12);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
 }
 
 .internship-index {
   color: var(--red);
   font-family: var(--display);
-  font-size: 72px;
+  font-size: clamp(42px, 4vw, 62px);
   font-weight: 900;
   letter-spacing: -0.08em;
   line-height: 0.8;
@@ -729,8 +829,8 @@
 
 .company-mark {
   display: grid;
-  width: min(100%, 220px);
-  margin: 0 0 34px;
+  width: min(100%, 320px);
+  margin: 0 0 30px;
   color: var(--paper);
   text-decoration: none;
   transition: transform 180ms ease;
@@ -755,15 +855,22 @@
 }
 
 .company-mark-label {
-  padding: 7px 10px 6px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px 7px;
   background: var(--red);
+}
+
+.company-mark-label span:last-child {
+  opacity: 0.72;
 }
 
 .company-mark-plate {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 104px;
+  min-height: 148px;
   padding: 16px;
   overflow: hidden;
   background: #f6f4ef;
@@ -787,7 +894,7 @@
   z-index: 1;
   display: block;
   width: 100%;
-  height: 72px;
+  height: 112px;
   object-fit: contain;
 }
 
@@ -824,7 +931,7 @@
 }
 
 .internship-title h2 {
-  font-size: clamp(50px, 5vw, 82px);
+  font-size: clamp(44px, 4.5vw, 74px);
 }
 
 .internship-title h3 {
@@ -841,7 +948,7 @@
   margin: 0 0 30px;
   color: var(--paper);
   font-family: var(--serif);
-  font-size: 26px;
+  font-size: clamp(20px, 2vw, 27px);
   font-style: italic;
   line-height: 1.35;
 }
@@ -1397,11 +1504,11 @@
   }
 
   .case-study {
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 70px minmax(0, 1fr);
   }
 
   .internship-card {
-    grid-template-columns: 70px 0.8fr 1.2fr;
+    grid-template-columns: 54px minmax(240px, 0.72fr) minmax(0, 1.28fr);
   }
 
   .photo-grid figure,
@@ -1445,24 +1552,40 @@
   .case-study,
   .internship-card {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 58px 0;
+    gap: 24px;
+    margin-bottom: 14px;
+    padding: 28px 22px;
   }
 
   .case-study-rail {
     display: flex;
+    min-height: 0;
     align-items: end;
     justify-content: space-between;
+    padding: 0 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(242, 239, 232, 0.14);
   }
 
   .case-study-rail > span,
   .internship-index {
-    font-size: 64px;
+    font-size: 48px;
   }
 
   .case-study-rail > p {
     margin: 0;
     text-align: right;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .case-study-heading {
+    display: grid;
+    gap: 16px;
+  }
+
+  .case-status {
+    width: max-content;
   }
 
   .case-study-body h2,
@@ -1471,8 +1594,20 @@
   }
 
   .case-summary {
-    margin-bottom: 42px;
-    font-size: 23px;
+    margin: 22px 0 28px;
+    font-size: 21px;
+  }
+
+  .case-columns {
+    gap: 8px;
+  }
+
+  .case-columns > div {
+    padding: 18px;
+  }
+
+  .company-mark-label {
+    font-size: 7px;
   }
 
   .case-columns,
@@ -3749,7 +3884,7 @@ html[data-motion-ready="true"] [data-reveal].is-visible {
 }
 
 .company-mark {
-  width: min(100%, 300px);
+  width: min(100%, 320px);
 }
 
 .company-visual {
@@ -3806,7 +3941,7 @@ html[data-motion-ready="true"] [data-reveal].is-visible {
 }
 
 .company-mark-plate {
-  min-height: 90px;
+  min-height: 148px;
 }
 
 .graduation-video-shell {
@@ -3917,8 +4052,6 @@ html[data-motion-ready="true"] [data-reveal].is-visible {
 }
 
 @supports not (animation-timeline: view()) {
-  .case-study[data-scroll-scene],
-  .internship-card[data-scroll-scene],
   .project[data-scroll-scene],
   .lab-module[data-scroll-scene],
   .trajectory-card[data-scroll-scene],
@@ -4001,7 +4134,7 @@ html[data-motion-ready="true"] [data-reveal].is-visible {
 
   .company-mark {
     width: 100%;
-    max-width: 430px;
+    max-width: 320px;
   }
 }
 

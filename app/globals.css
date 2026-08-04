@@ -2158,6 +2158,10 @@ footer a {
 }
 
 @media (max-width: 760px) {
+  .start-sequence {
+    display: none;
+  }
+
   .site-header {
     min-height: 72px;
     padding: 0 20px;

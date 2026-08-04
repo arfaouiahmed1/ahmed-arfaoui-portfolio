@@ -29,22 +29,30 @@ export default function ProjectsPage() {
           <article className="case-study" key={project.title} data-scroll-scene>
             <div className="case-study-rail">
               <span>{project.number}</span>
-              <p>{project.category}</p>
+              <p>CASE / {project.number}</p>
             </div>
             <div className="case-study-body">
-              <h2>{project.title}</h2>
+              <div className="case-study-heading">
+                <div>
+                  <p className="case-category">{project.category}</p>
+                  <h2>{project.title}</h2>
+                </div>
+                <span className="case-status">
+                  <i aria-hidden="true" /> BUILT / TESTED
+                </span>
+              </div>
               <p className="case-summary">{project.summary}</p>
               <div className="case-columns">
                 <div>
-                  <h3>THE CHALLENGE</h3>
+                  <h3><span>01</span> THE CHALLENGE</h3>
                   <p>{project.challenge}</p>
                 </div>
                 <div>
-                  <h3>THE APPROACH</h3>
+                  <h3><span>02</span> THE APPROACH</h3>
                   <p>{project.approach}</p>
                 </div>
                 <div>
-                  <h3>THE OUTCOME</h3>
+                  <h3><span>03</span> THE OUTCOME</h3>
                   <p>{project.outcome}</p>
                 </div>
               </div>
