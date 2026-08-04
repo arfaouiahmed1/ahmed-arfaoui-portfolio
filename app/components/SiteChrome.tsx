@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the supplied AA mark is a small static brand asset */
 import Link from "next/link";
+import { MotionSystem } from "./MotionSystem";
 
 const navigation = [
   { href: "/projects", label: "Projects" },
@@ -140,7 +141,14 @@ export function Arrow() {
 export function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <main id="top">
+      <MotionSystem />
       <div className="grain" aria-hidden="true" />
+      <div className="site-atmosphere" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+      </div>
+      <div className="page-scroll-meter" aria-hidden="true" />
       <RaceIntro />
       <SiteHeader />
       <RaceRail />

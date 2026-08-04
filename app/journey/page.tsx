@@ -1,127 +1,242 @@
-/* eslint-disable @next/next/no-img-element -- supplied photography is pre-optimized for a static GitHub Pages export */
+/* eslint-disable @next/next/no-img-element -- supplied photography is pre-optimized for the static site */
 import type { Metadata } from "next";
 import { Arrow, PageShell } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "My Journey — Ahmed Arfaoui",
-  description: "From difficult preparatory years at IPEIB to graduating from ESPRIT with an excellent mention.",
+  description:
+    "From difficult preparatory years at IPEIB to graduating from ESPRIT with an excellent mention.",
 };
+
+const roadmap = ["IPEIB", "ESPRIT", "GRADUATION"];
 
 export default function JourneyPage() {
   return (
     <PageShell>
-      <section className="journey-opening">
-        <img
-          src="/photography/07-edge-of-the-wind.webp"
-          alt="Ahmed at sunset beside wind turbines"
-          width="2000"
-          height="1125"
-        />
-        <div className="journey-opening-copy">
-          <p className="eyebrow">A JOURNEY IN FOUR SECTORS</p>
-          <h1>
-            I FAILED.
-            <br />
-            I CHANGED.
-            <br />
-            I <em>continued.</em>
-          </h1>
-          <p>
-            I struggled at IPEIB and failed more than once. I did not want that
-            to be the end of my studies, so I changed direction, joined ESPRIT,
-            and eventually graduated with an excellent mention.
-          </p>
+      <section
+        className="journey-opening journey-scroll-scene"
+        data-scroll-scene
+      >
+        <div className="journey-opening-stage">
+          <img
+            className="journey-opening-image"
+            src="/journey/ipeib-sky.png"
+            alt="The landscape and tower near IPEIB"
+            width="679"
+            height="906"
+          />
+          <div className="journey-opening-wash" aria-hidden="true" />
+          <div className="journey-opening-copy">
+            <p className="eyebrow">MY ROUTE / THREE CHAPTERS</p>
+            <h1>
+              THE ROAD
+              <br />
+              WASN&apos;T
+              <br />
+              <em>straight.</em>
+            </h1>
+            <p>
+              I struggled at IPEIB, changed direction, started again at ESPRIT,
+              and finished as an engineer with an excellent mention.
+            </p>
+          </div>
+
+          <div className="journey-opening-status" aria-hidden="true">
+            <span>START / PREPA</span>
+            <strong>KEEP SCROLLING</strong>
+            <i />
+          </div>
+
+          <ol className="journey-roadmap" aria-label="Journey chapters">
+            {roadmap.map((stop, index) => (
+              <li key={stop}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                {stop}
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
-      <section className="journey-sectors section-shell">
-        <article>
-          <span>SECTOR 01</span>
-          <div className="education-mark">
+      <section
+        className="journey-chapter journey-chapter-ipeib"
+        data-scroll-scene
+      >
+        <div className="journey-chapter-stage">
+          <div className="journey-chapter-media">
             <img
-              src="/education/ipeib.png"
-              alt="IPEIB logo"
-              width="948"
-              height="762"
+              src="/journey/ipeib-sky.png"
+              alt="A view near IPEIB under a clear blue sky"
+              width="679"
+              height="906"
               loading="lazy"
               decoding="async"
             />
-            <div>
-              <small>INSTITUTION 01</small>
-              <strong>IPEIB</strong>
-              <p>Preparatory cycle</p>
-            </div>
+            <span className="journey-image-label">THE FIRST ROUTE / IPEIB</span>
           </div>
-          <h2>IPEIB: WHEN EFFORT DID NOT LOOK LIKE PROGRESS</h2>
-          <p>
-            Preparatory school at IPEIB was hard for me. I was putting in the
-            work, but the results were not there, and I failed more than once.
-          </p>
-          <p>
-            It affected my confidence. It also made me accept that trying harder
-            in exactly the same way was not enough. I still wanted to become an
-            engineer, but I needed a different route.
-          </p>
-        </article>
-        <article>
-          <span>SECTOR 02</span>
-          <div className="education-mark">
+
+          <div className="journey-chapter-copy">
+            <p className="eyebrow">CHAPTER 01 / IPEIB</p>
+            <div className="education-mark journey-education-mark">
+              <img
+                src="/education/ipeib.png"
+                alt="IPEIB logo"
+                width="948"
+                height="762"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <small>PREPARATORY CYCLE</small>
+                <strong>IPEIB</strong>
+              </div>
+            </div>
+            <h2>
+              I TRIED.
+              <br />
+              I FAILED.
+              <br />
+              <em>I stayed.</em>
+            </h2>
+            <p>
+              Prepa was rough for me. I worked, failed more than once, and
+              watched my confidence drop with every result. For a while, it felt
+              like effort and progress had nothing to do with each other.
+            </p>
+            <p>
+              I still wanted to become an engineer. The honest decision was not
+              to repeat the same year in the same way. It was to find another
+              route and keep going.
+            </p>
+          </div>
+
+          <aside className="journey-telemetry" aria-label="IPEIB chapter notes">
+            <p><span>ROUTE</span><strong>PREPA</strong></p>
+            <p><span>RESULT</span><strong>FAILED</strong></p>
+            <p><span>DECISION</span><strong>CONTINUE</strong></p>
+          </aside>
+          <span className="journey-ghost-number" aria-hidden="true">01</span>
+        </div>
+      </section>
+
+      <section
+        className="journey-chapter journey-chapter-esprit"
+        data-scroll-scene
+      >
+        <div className="journey-chapter-stage">
+          <div className="journey-chapter-media">
             <img
-              src="/education/esprit.png"
-              alt="ESPRIT Honoris United Universities logo"
-              width="339"
-              height="160"
+              src="/photography/33-city-geometry.webp"
+              alt="Modern architecture photographed by Ahmed"
+              width="1365"
+              height="2048"
               loading="lazy"
               decoding="async"
             />
-            <div>
-              <small>INSTITUTION 02</small>
-              <strong>ESPRIT</strong>
-              <p>Software engineering and data</p>
+            <span className="journey-image-label">THE RESET / ESPRIT</span>
+          </div>
+
+          <div className="journey-chapter-copy">
+            <p className="eyebrow">CHAPTER 02 / ESPRIT</p>
+            <div className="education-mark journey-education-mark">
+              <img
+                src="/education/esprit.png"
+                alt="ESPRIT Honoris United Universities logo"
+                width="339"
+                height="160"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <small>SOFTWARE ENGINEERING</small>
+                <strong>ESPRIT</strong>
+              </div>
+            </div>
+            <h2>
+              A CLEAN
+              <br />
+              <em>restart.</em>
+            </h2>
+            <p>
+              ESPRIT was not me erasing the years before it. It was me using
+              what they taught me. I arrived more realistic, more disciplined,
+              and finally studying in a way that worked for me.
+            </p>
+            <p>
+              Formula 1 pulled me toward data: lap times, telemetry, tyre
+              strategy, and all the decisions hidden in numbers. At ESPRIT that
+              curiosity turned into software, dashboards, machine learning,
+              deep learning, and eventually AI agents.
+            </p>
+
+            <div className="journey-build-line" aria-label="Skills developed at ESPRIT">
+              <span>DATA</span>
+              <i />
+              <span>ML</span>
+              <i />
+              <span>DEEP LEARNING</span>
+              <i />
+              <span>AGENTS</span>
             </div>
           </div>
-          <h2>THE SWITCH: CHOOSING ESPRIT AND STARTING AGAIN</h2>
-          <p>
-            Moving to ESPRIT was my way of starting again without pretending
-            the years before it never happened. I understood myself better and
-            had a clearer idea of what I wanted to study.
-          </p>
-          <p>
-            I began connecting software engineering with data. Formula 1 had
-            already taught me to love lap times, strategy, telemetry, and the
-            decisions hidden inside numbers. At ESPRIT, that curiosity became a
-            discipline.
-          </p>
-        </article>
-        <article>
-          <span>SECTOR 03</span>
-          <h2>BUILDING: FROM DATA PROJECTS TO AGENTIC AI</h2>
-          <p>
-            I started with dashboards and classical machine learning. Later I
-            worked on computer vision, NLP, MLOps, generative AI, and finally
-            autonomous browser agents.
-          </p>
-          <p>
-            The internships made the difference between a school project and
-            work people could actually use much clearer to me. I had to think
-            about latency, validation, users, and whether the result really held
-            up outside a demo.
-          </p>
-        </article>
-        <article>
-          <span>SECTOR 04</span>
-          <h2>THE FINISH LINE: EXCELLENT MENTION</h2>
-          <p>
-            Graduating with an excellent mention meant a lot because I knew how
-            close I had come to giving up. The earlier failures did not
-            disappear, but they no longer defined what I could finish.
-          </p>
-          <p>
-            My mother and my friends were there for the presentation. I am glad
-            these photos include them because they supported me through the
-            difficult parts, not only the final day.
-          </p>
-        </article>
+
+          <aside className="journey-telemetry" aria-label="ESPRIT chapter notes">
+            <p><span>ROUTE</span><strong>ENGINEERING</strong></p>
+            <p><span>FOCUS</span><strong>DATA + AI</strong></p>
+            <p><span>MODE</span><strong>BUILDING</strong></p>
+          </aside>
+          <span className="journey-ghost-number" aria-hidden="true">02</span>
+        </div>
+      </section>
+
+      <section
+        className="journey-chapter journey-chapter-graduation"
+        data-scroll-scene
+      >
+        <div className="journey-chapter-stage">
+          <div className="journey-chapter-media">
+            <img
+              src="/media/graduation-with-mom-and-friends.webp"
+              alt="Ahmed at ESPRIT after graduation with his mother and friends"
+              width="2200"
+              height="1238"
+              loading="lazy"
+              decoding="async"
+            />
+            <span className="journey-image-label">THE FINISH / JULY 2026</span>
+          </div>
+
+          <div className="journey-chapter-copy">
+            <p className="eyebrow">CHAPTER 03 / GRADUATION</p>
+            <h2>
+              EXCELLENT
+              <br />
+              <em>mention.</em>
+            </h2>
+            <p>
+              Graduation mattered because I knew exactly how close I had come
+              to stopping. The failures were still part of the story, but they
+              were no longer the ending.
+            </p>
+            <p>
+              My mother and my friends were there after the presentation. I
+              wanted them in this page because they were there for the difficult
+              years too, not just the good photo at the end.
+            </p>
+            <div className="journey-result-badge">
+              <span>FINAL RESULT</span>
+              <strong>ENGINEERING DEGREE</strong>
+              <em>EXCELLENT MENTION</em>
+            </div>
+          </div>
+
+          <aside className="journey-telemetry" aria-label="Graduation chapter notes">
+            <p><span>STATUS</span><strong>GRADUATED</strong></p>
+            <p><span>RESULT</span><strong>EXCELLENT</strong></p>
+            <p><span>NEXT</span><strong>KEEP BUILDING</strong></p>
+          </aside>
+          <span className="journey-ghost-number" aria-hidden="true">03</span>
+        </div>
       </section>
 
       <section className="graduation-film section-shell">
@@ -129,14 +244,14 @@ export default function JourneyPage() {
           <div>
             <p className="eyebrow">THE PRESENTATION / JULY 2026</p>
             <h2>
-              THE MOMENT
+              WHEN IT
               <br />
-              BECAME <em>real.</em>
+              FELT <em>real.</em>
             </h2>
           </div>
           <p>
-            This is the presentation from my graduation project. It is the
-            moment the degree finally felt real to me.
+            My final presentation—the point where all those detours finally
+            became an engineering degree.
           </p>
         </div>
         <video
@@ -159,7 +274,7 @@ export default function JourneyPage() {
           />
           <figcaption>
             <span>PORTRAIT 01</span>
-            Me on one of the trips where I took many of the photos on this site.
+            One of the trips where I took many of the photos on this site.
           </figcaption>
         </figure>
         <figure>

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- local company marks are small static assets included in the GitHub Pages export */
 import type { Metadata } from "next";
-import { HeroTelemetry, PageShell } from "../components/SiteChrome";
+import { PageShell } from "../components/SiteChrome";
 import { internships } from "../content";
 
 const companyProfiles: Record<
@@ -34,11 +34,96 @@ export const metadata: Metadata = {
   description: "Detailed stories from Ahmed Arfaoui's four internships.",
 };
 
+function ExperienceCircuit() {
+  return (
+    <aside className="experience-circuit" aria-hidden="true">
+      <div className="experience-circuit-head">
+        <span>CAREER CIRCUIT / TUNIS</span>
+        <strong>04 / 04</strong>
+      </div>
+
+      <div className="experience-circuit-board">
+        <svg
+          className="experience-circuit-track"
+          viewBox="0 0 520 500"
+          role="presentation"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            className="experience-track-shadow"
+            d="M86 418C40 348 64 274 141 250C225 224 187 120 286 87C376 56 473 123 450 214C428 304 318 274 298 363C279 445 163 470 86 418Z"
+          />
+          <path
+            className="experience-track-line"
+            d="M86 418C40 348 64 274 141 250C225 224 187 120 286 87C376 56 473 123 450 214C428 304 318 274 298 363C279 445 163 470 86 418Z"
+          />
+          <path
+            className="experience-track-progress"
+            pathLength="100"
+            d="M86 418C40 348 64 274 141 250C225 224 187 120 286 87C376 56 473 123 450 214C428 304 318 274 298 363C279 445 163 470 86 418Z"
+          />
+          <g className="experience-track-point experience-track-point-1">
+            <circle cx="88" cy="419" r="14" />
+            <circle cx="88" cy="419" r="4" />
+          </g>
+          <g className="experience-track-point experience-track-point-2">
+            <circle cx="145" cy="248" r="14" />
+            <circle cx="145" cy="248" r="4" />
+          </g>
+          <g className="experience-track-point experience-track-point-3">
+            <circle cx="290" cy="86" r="14" />
+            <circle cx="290" cy="86" r="4" />
+          </g>
+          <g className="experience-track-point experience-track-point-4">
+            <circle cx="446" cy="214" r="18" />
+            <circle cx="446" cy="214" r="5" />
+          </g>
+        </svg>
+
+        <div className="experience-pit experience-pit-1">
+          <span>01</span>
+          <div>
+            <strong>CMR</strong>
+            <small>BI / FORECASTING</small>
+          </div>
+        </div>
+        <div className="experience-pit experience-pit-2">
+          <span>02</span>
+          <div>
+            <strong>ESPRIT</strong>
+            <small>MACHINE LEARNING</small>
+          </div>
+        </div>
+        <div className="experience-pit experience-pit-3">
+          <span>03</span>
+          <div>
+            <strong>VERMEG</strong>
+            <small>GENERATIVE AI</small>
+          </div>
+        </div>
+        <div className="experience-pit experience-pit-4">
+          <span>04</span>
+          <div>
+            <strong>SOFT STARS</strong>
+            <small>AGENT SYSTEMS</small>
+          </div>
+        </div>
+
+        <div className="experience-circuit-status">
+          <span>NOW</span>
+          <strong>BUILDING END-TO-END</strong>
+          <small>DATA → MODELS → AGENTS</small>
+        </div>
+      </div>
+    </aside>
+  );
+}
+
 export default function ExperiencePage() {
   return (
     <PageShell>
       <section className="page-hero page-hero-experience">
-        <HeroTelemetry lap="LAP 04 / 04" />
+        <ExperienceCircuit />
         <p className="eyebrow">EXPERIENCE / FOUR CHAPTERS</p>
         <h1>
           LEARNING BY

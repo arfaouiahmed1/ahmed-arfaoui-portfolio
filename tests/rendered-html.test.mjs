@@ -105,11 +105,15 @@ test("journey includes the graduation film, mother, and excellent mention", asyn
   assert.match(html, /my mother and friends/i);
 });
 
-test("photography contains all 25 supplied frames", async () => {
+test("photography contains the complete ratio-safe archive and motion frame", async () => {
   const html = await htmlFor("/photography");
   const photoMatches = html.match(/\/photography\/[^"]+\.webp/g) ?? [];
-  assert.ok(new Set(photoMatches).size >= 25);
-  assert.match(html, /25-wind-country\.webp/);
+  assert.ok(new Set(photoMatches).size >= 53);
+  assert.match(html, /39-self-portrait-above-the-sea\.webp/);
+  assert.match(html, /53-bus-at-sunset\.webp/);
+  assert.match(html, /54-night-sky-motion\.mp4/);
+  assert.match(html, /width="1209"/);
+  assert.match(html, /height="1616"/);
 });
 
 test("memorial renders all four family photographs with restrained language", async () => {
