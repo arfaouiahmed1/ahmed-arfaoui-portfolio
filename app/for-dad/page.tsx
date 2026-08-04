@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ForDadPage() {
   return (
     <PageShell>
-      <section className="memorial-hero">
+      <section className="memorial-hero" data-scroll-scene>
         <img
           src="/photography/24-fog-signal.webp"
           alt="Streetlights glowing through dense fog"
@@ -29,7 +29,7 @@ export default function ForDadPage() {
         </div>
       </section>
 
-      <section className="memorial-story section-shell">
+      <section className="memorial-story section-shell" data-scroll-scene>
         <p className="memorial-dropcap">My father went through several brain strokes.</p>
         <p>
           In his final years, Alzheimer’s affected what he remembered and how he
@@ -46,8 +46,8 @@ export default function ForDadPage() {
         </blockquote>
       </section>
 
-      <section className="memory-gallery section-shell" aria-label="Photographs of Ahmed's father">
-        <figure className="memory-photo memory-photo-wide">
+      <section className="memory-gallery section-shell" aria-label="Photographs of Ahmed's father" data-scroll-scene>
+        <figure className="memory-photo memory-photo-wide" data-scroll-scene>
           <img
             src="/memorial/01-younger-years.webp"
             alt="Ahmed's father in his younger years"
@@ -59,7 +59,7 @@ export default function ForDadPage() {
             <p>My father when he was younger.</p>
           </figcaption>
         </figure>
-        <figure className="memory-photo">
+        <figure className="memory-photo" data-scroll-scene>
           <img
             src="/memorial/02-at-work.webp"
             alt="Ahmed's father standing in a busy room"
@@ -71,7 +71,7 @@ export default function ForDadPage() {
             <p>An old photo of him among colleagues and friends.</p>
           </figcaption>
         </figure>
-        <figure className="memory-photo">
+        <figure className="memory-photo" data-scroll-scene>
           <img
             src="/memorial/03-at-home.webp"
             alt="Ahmed's father seated at home wearing a traditional red chechia"
@@ -83,7 +83,7 @@ export default function ForDadPage() {
             <p>A photo of him at home in his red chechia.</p>
           </figcaption>
         </figure>
-        <figure className="memory-photo memory-photo-wide">
+        <figure className="memory-photo memory-photo-wide" data-scroll-scene>
           <img
             src="/memorial/04-an-afternoon-out.webp"
             alt="Ahmed's father outside during an afternoon outing"
@@ -97,7 +97,7 @@ export default function ForDadPage() {
         </figure>
       </section>
 
-      <section className="memorial-close">
+      <section className="memorial-close" data-scroll-scene>
         <img
           src="/photography/16-birds-across-the-wire.webp"
           alt="Birds crossing a pastel sky beside a wire"

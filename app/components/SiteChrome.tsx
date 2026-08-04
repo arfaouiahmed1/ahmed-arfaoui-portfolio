@@ -1,58 +1,8 @@
-/* eslint-disable @next/next/no-img-element -- the supplied AA mark is a small static brand asset */
-import Link from "next/link";
+import { BrandMark } from "./BrandMark";
 import { MotionSystem } from "./MotionSystem";
+import { SiteHeader } from "./SiteHeaderClient";
 
-const navigation = [
-  { href: "/projects", label: "Projects" },
-  { href: "/experience", label: "Experience" },
-  { href: "/journey", label: "Journey" },
-  { href: "/photography", label: "Photography" },
-  { href: "/for-dad", label: "For Dad" },
-];
-
-export function BrandMark({ className = "" }: { className?: string }) {
-  return (
-    <img
-      className={`aa-dot-mark ${className}`.trim()}
-      src="/aa-dot-logo.png"
-      alt=""
-      width="129"
-      height="99"
-      aria-hidden="true"
-    />
-  );
-}
-
-export function SiteHeader() {
-  return (
-    <header className="site-header">
-      <Link className="wordmark" href="/" aria-label="Ahmed Arfaoui — home">
-        <BrandMark className="wordmark-symbol" />
-        <span className="wordmark-copy">
-          AHMED ARFAOUI
-          <small>AI ENGINEER · TUNIS</small>
-        </span>
-      </Link>
-
-      <nav aria-label="Primary navigation">
-        {navigation.map((item) => (
-          <a href={item.href} key={item.href}>
-            {item.label}
-          </a>
-        ))}
-      </nav>
-
-      <a
-        className="header-cta"
-        href="/Ahmed-Arfaoui-CV.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Download CV <span aria-hidden="true">↓</span>
-      </a>
-    </header>
-  );
-}
+export { BrandMark } from "./BrandMark";
 
 export function SiteFooter() {
   return (

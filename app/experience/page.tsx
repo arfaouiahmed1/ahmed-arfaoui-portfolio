@@ -5,27 +5,48 @@ import { internships } from "../content";
 
 const companyProfiles: Record<
   string,
-  { logo: string; alt: string; profile: string }
+  {
+    logo: string;
+    alt: string;
+    profile: string;
+    visual: string;
+    visualAlt: string;
+    visualFit?: "cover" | "contain";
+    sourceLabel: string;
+  }
 > = {
   "Soft Stars": {
     logo: "/companies/soft-stars.jpg",
     alt: "Soft Stars logo",
     profile: "https://www.linkedin.com/company/softstarscom",
+    visual: "/companies/soft-stars-cover.jpg",
+    visualAlt: "Soft Stars company cover artwork",
+    sourceLabel: "COMPANY PROFILE / SOFT STARS",
   },
   VERMEG: {
-    logo: "/companies/vermeg.jpg",
+    logo: "/companies/vermeg.svg",
     alt: "VERMEG logo",
     profile: "https://www.linkedin.com/company/vermeg",
+    visual: "/companies/vermeg.svg",
+    visualAlt: "VERMEG official brand mark",
+    visualFit: "contain",
+    sourceLabel: "OFFICIAL BRAND / VERMEG",
   },
   ESPRIT: {
     logo: "/companies/esprit.svg",
     alt: "ESPRIT logo",
     profile: "https://www.esprit.tn/",
+    visual: "/education/esprit-campus.jpg",
+    visualAlt: "ESPRIT campus building",
+    sourceLabel: "OFFICIAL CAMPUS / ESPRIT",
   },
   "CMR Tunisie": {
-    logo: "/companies/cmr-tunisie.jpg",
+    logo: "/companies/cmr.png",
     alt: "CMR, an Amphenol company logo",
     profile: "https://www.cmr-group.com/",
+    visual: "/companies/cmr-work.jpg",
+    visualAlt: "A locomotive featuring CMR engineering systems",
+    sourceLabel: "OFFICIAL FIELD IMAGE / CMR",
   },
 };
 
@@ -122,7 +143,7 @@ function ExperienceCircuit() {
 export default function ExperiencePage() {
   return (
     <PageShell>
-      <section className="page-hero page-hero-experience">
+      <section className="page-hero page-hero-experience" data-scroll-scene>
         <ExperienceCircuit />
         <p className="eyebrow">EXPERIENCE / FOUR CHAPTERS</p>
         <h1>
@@ -136,12 +157,16 @@ export default function ExperiencePage() {
         </p>
       </section>
 
-      <section className="internship-list section-shell">
+      <section className="internship-list section-shell" data-scroll-scene>
         {internships.map((internship) => {
           const companyProfile = companyProfiles[internship.company];
 
           return (
-            <article className="internship-card" key={internship.company}>
+            <article
+              className="internship-card"
+              key={internship.company}
+              data-scroll-scene
+            >
               <div className="internship-index">{internship.number}</div>
               <div className="internship-title">
                 {companyProfile ? (
@@ -154,6 +179,19 @@ export default function ExperiencePage() {
                   >
                     <span className="company-mark-label">
                       TEAM ID / {internship.number}
+                    </span>
+                    <span
+                      className={`company-visual company-visual-${companyProfile.visualFit ?? "cover"}`}
+                    >
+                      <img
+                        src={companyProfile.visual}
+                        alt={companyProfile.visualAlt}
+                        width="1200"
+                        height="700"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <small>{companyProfile.sourceLabel}</small>
                     </span>
                     <span className="company-mark-plate">
                       <img

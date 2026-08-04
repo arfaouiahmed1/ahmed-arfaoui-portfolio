@@ -63,6 +63,20 @@ export function MotionSystem() {
       target.style.setProperty("--reveal-delay", `${(index % 6) * 55}ms`);
     });
 
+    const revealNearViewport = () => {
+      const viewportHeight = window.innerHeight;
+
+      revealTargets.forEach((target) => {
+        const rect = target.getBoundingClientRect();
+        if (rect.top <= viewportHeight * 1.18 && rect.bottom >= -64) {
+          target.classList.add("is-visible");
+        }
+      });
+    };
+
+    // Progressive enhancement: anything already on screen must be visible
+    // before the motion-ready CSS is allowed to hide later content.
+    revealNearViewport();
     root.dataset.motionReady = "true";
 
     if (reducedMotion) {
@@ -75,6 +89,15 @@ export function MotionSystem() {
         section.classList.add("is-active");
         section.style.setProperty("--section-progress", "0.5");
       });
+
+      return () => {
+        delete root.dataset.motionReady;
+      };
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      revealTargets.forEach((target) => target.classList.add("is-visible"));
+      motionSections.forEach((section) => section.classList.add("is-active"));
 
       return () => {
         delete root.dataset.motionReady;
@@ -95,7 +118,9 @@ export function MotionSystem() {
       },
     );
 
-    revealTargets.forEach((target) => observer.observe(target));
+    revealTargets.forEach((target) => {
+      if (!target.classList.contains("is-visible")) observer.observe(target);
+    });
 
     const sectionObserver = new IntersectionObserver(
       (entries) => {
@@ -125,8 +150,18 @@ export function MotionSystem() {
 
       scenes.forEach((scene) => {
         const rect = scene.getBoundingClientRect();
-        const sceneRange = Math.max(scene.offsetHeight - window.innerHeight, 1);
-        const progress = clamp(-rect.top / sceneRange);
+        const isStickyStory = scene.matches(
+          ".journey-scroll-scene, .journey-chapter",
+        );
+        const progress = isStickyStory
+          ? clamp(
+              -rect.top /
+                Math.max(scene.offsetHeight - window.innerHeight, 1),
+            )
+          : clamp(
+              (window.innerHeight - rect.top) /
+                Math.max(window.innerHeight + rect.height, 1),
+            );
         scene.style.setProperty("--scene-progress", progress.toFixed(4));
       });
 
@@ -145,15 +180,20 @@ export function MotionSystem() {
       frame = window.requestAnimationFrame(updateScrollMotion);
     };
 
+    const handleResize = () => {
+      revealNearViewport();
+      requestUpdate();
+    };
+
     updateScrollMotion();
     window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       observer.disconnect();
       sectionObserver.disconnect();
       window.removeEventListener("scroll", requestUpdate);
-      window.removeEventListener("resize", requestUpdate);
+      window.removeEventListener("resize", handleResize);
       if (frame) window.cancelAnimationFrame(frame);
       delete root.dataset.motionReady;
     };

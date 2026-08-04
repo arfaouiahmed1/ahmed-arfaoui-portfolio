@@ -29,7 +29,7 @@ const tools = [
 export default function Home() {
   return (
     <PageShell>
-      <section className="hero">
+      <section className="hero" data-scroll-scene>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-kicker reveal">
           <span className="status-light" />
@@ -127,7 +127,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="work section-shell">
+      <section className="work section-shell" data-scroll-scene>
         <div className="section-heading">
           <div>
             <p className="eyebrow">01 / SELECTED WORK</p>
@@ -146,6 +146,7 @@ export default function Home() {
             <article
               className={`project project-${["red", "blue", "lime", "amber"][index]}`}
               key={project.title}
+              data-scroll-scene
             >
               <div className="project-number">{project.number}</div>
               <div className="project-main">
@@ -177,7 +178,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="intelligence-lab section-shell">
+      <section className="intelligence-lab section-shell" data-scroll-scene>
         <div className="section-heading lab-heading">
           <div>
             <p className="eyebrow">02 / DATA + INTELLIGENCE</p>
@@ -195,7 +196,7 @@ export default function Home() {
         </div>
 
         <div className="lab-grid">
-          <article className="lab-module lab-module-data">
+          <article className="lab-module lab-module-data" data-scroll-scene>
             <div className="lab-module-top">
               <span>01</span>
               <p>DATA ANALYSIS</p>
@@ -225,7 +226,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="lab-module lab-module-viz">
+          <article className="lab-module lab-module-viz" data-scroll-scene>
             <div className="lab-module-top">
               <span>02</span>
               <p>VISUALISATION</p>
@@ -249,7 +250,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="lab-module lab-module-agents">
+          <article className="lab-module lab-module-agents" data-scroll-scene>
             <div className="lab-module-top">
               <span>03</span>
               <p>AI AGENTS</p>
@@ -323,7 +324,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="lab-module lab-module-llm">
+          <article className="lab-module lab-module-llm" data-scroll-scene>
             <div className="lab-module-top">
               <span>04</span>
               <p>LLMs</p>
@@ -347,7 +348,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="lab-module lab-module-deep">
+          <article className="lab-module lab-module-deep" data-scroll-scene>
             <div className="lab-module-top">
               <span>05</span>
               <p>DEEP LEARNING</p>
@@ -375,7 +376,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about section-shell">
+      <section className="about section-shell" data-scroll-scene>
         <div className="about-intro">
           <p className="eyebrow">03 / THE PERSON BEHIND THE PIPELINE</p>
           <h2>
@@ -414,7 +415,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="trajectory section-shell">
+      <section className="trajectory section-shell" data-scroll-scene>
         <div className="section-heading compact">
           <div>
             <p className="eyebrow">04 / TRAJECTORY</p>
@@ -428,7 +429,7 @@ export default function Home() {
 
         <div className="experience-grid">
           {internships.map((item) => (
-            <article key={item.company}>
+            <article key={item.company} data-scroll-scene>
               <div className="experience-marker">
                 <span>{item.number}</span>
               </div>
@@ -445,7 +446,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="journey-teaser">
+      <section className="journey-teaser" data-scroll-scene>
         <img
           src="/photography/07-edge-of-the-wind.webp"
           alt="Ahmed at sunset beside wind turbines"
@@ -470,7 +471,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="toolkit section-shell">
+      <section className="toolkit section-shell" data-scroll-scene>
         <div className="toolkit-title">
           <p className="eyebrow">06 / PIT WALL</p>
           <h2>THE TOOLKIT.</h2>
@@ -486,7 +487,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact section-shell">
+      <section className="contact section-shell" data-scroll-scene>
         <div className="contact-grid" aria-hidden="true" />
         <p className="eyebrow">07 / OPEN CHANNEL</p>
         <h2>

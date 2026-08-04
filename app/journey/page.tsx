@@ -126,10 +126,10 @@ export default function JourneyPage() {
         <div className="journey-chapter-stage">
           <div className="journey-chapter-media">
             <img
-              src="/photography/33-city-geometry.webp"
-              alt="Modern architecture photographed by Ahmed"
-              width="1365"
-              height="2048"
+              src="/education/esprit-campus.jpg"
+              alt="The ESPRIT campus"
+              width="1280"
+              height="853"
               loading="lazy"
               decoding="async"
             />
@@ -140,10 +140,10 @@ export default function JourneyPage() {
             <p className="eyebrow">CHAPTER 02 / ESPRIT</p>
             <div className="education-mark journey-education-mark">
               <img
-                src="/education/esprit.png"
+                src="/education/esprit.svg"
                 alt="ESPRIT Honoris United Universities logo"
-                width="339"
-                height="160"
+                width="472"
+                height="220"
                 loading="lazy"
                 decoding="async"
               />
@@ -239,7 +239,7 @@ export default function JourneyPage() {
         </div>
       </section>
 
-      <section className="graduation-film section-shell">
+      <section className="graduation-film section-shell" data-scroll-scene>
         <div className="section-heading">
           <div>
             <p className="eyebrow">THE PRESENTATION / JULY 2026</p>
@@ -254,18 +254,30 @@ export default function JourneyPage() {
             became an engineering degree.
           </p>
         </div>
-        <video
-          controls
-          preload="metadata"
-          poster="/media/graduation-with-mom-and-friends.webp"
-        >
-          <source src="/media/graduation-presentation.mp4" type="video/mp4" />
-          Your browser does not support embedded video.
-        </video>
+        <div className="graduation-video-shell">
+          <div className="graduation-video-frame">
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              poster="/media/graduation-with-mom-and-friends.webp"
+            >
+              <source src="/media/graduation-presentation.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+          </div>
+          <div className="graduation-video-note">
+            <span>12 SECONDS / FINAL PRESENTATION</span>
+            <p>
+              A small clip from the room where the years of changing direction,
+              rebuilding, and learning finally became an engineering degree.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="graduation-photos">
-        <figure>
+      <section className="graduation-photos" data-scroll-scene>
+        <figure data-scroll-scene>
           <img
             src="/photography/07-edge-of-the-wind.webp"
             alt="Ahmed standing alone in a wind-turbine landscape at sunset"
@@ -277,7 +289,7 @@ export default function JourneyPage() {
             One of the trips where I took many of the photos on this site.
           </figcaption>
         </figure>
-        <figure>
+        <figure data-scroll-scene>
           <img
             src="/media/graduation-with-mom-and-friends.webp"
             alt="Ahmed at ESPRIT after his graduation presentation with his mother and friends"
@@ -291,7 +303,7 @@ export default function JourneyPage() {
         </figure>
       </section>
 
-      <section className="journey-next section-shell">
+      <section className="journey-next section-shell" data-scroll-scene>
         <p>WHAT I TOOK FROM IT.</p>
         <h2>FAILING DID NOT MEAN I WAS FINISHED.</h2>
         <h3>I CHANGED THE ROUTE AND KEPT GOING.</h3>

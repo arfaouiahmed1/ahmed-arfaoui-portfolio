@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <PageShell>
-      <section className="page-hero page-hero-projects">
+      <section className="page-hero page-hero-projects" data-scroll-scene>
         <HeroTelemetry lap="LAP 01 / 06" />
         <p className="eyebrow">PROJECT ARCHIVE / 01—06</p>
         <h1>
@@ -24,9 +24,9 @@ export default function ProjectsPage() {
         </p>
       </section>
 
-      <section className="case-study-list section-shell">
+      <section className="case-study-list section-shell" data-scroll-scene>
         {projects.map((project) => (
-          <article className="case-study" key={project.title}>
+          <article className="case-study" key={project.title} data-scroll-scene>
             <div className="case-study-rail">
               <span>{project.number}</span>
               <p>{project.category}</p>
