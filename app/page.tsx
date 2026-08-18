@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- supplied photography is pre-optimized for a static GitHub Pages export */
 import type { CSSProperties } from "react";
+import { HorizontalCarousel } from "./components/HorizontalCarousel";
 import { Arrow, PageShell } from "./components/SiteChrome";
 import { internships, projects } from "./content";
 
@@ -141,12 +142,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="project-list">
+        <HorizontalCarousel ariaLabel="Selected work projects carousel">
           {projects.slice(0, 4).map((project, index) => (
             <article
               className={`project project-${["red", "blue", "lime", "amber"][index]}`}
               key={project.title}
-              data-scroll-scene
             >
               <div className="project-number">{project.number}</div>
               <div className="project-main">
@@ -171,7 +171,7 @@ export default function Home() {
               </div>
             </article>
           ))}
-        </div>
+        </HorizontalCarousel>
 
         <a className="section-cta" href="/projects">
           EXPLORE ALL SIX PROJECTS <Arrow />
@@ -427,9 +427,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="trajectory-horizontal-track" tabIndex={0} aria-label="Career trajectory cards">
+        <HorizontalCarousel ariaLabel="Career trajectory items">
           {internships.map((item) => (
-            <article className="trajectory-card" key={item.company} data-scroll-scene>
+            <article className="trajectory-card" key={item.company}>
               <div className="trajectory-card-header">
                 <span className="trajectory-number">{item.number}</span>
                 <p className="trajectory-year">{item.dates}</p>
@@ -439,7 +439,7 @@ export default function Home() {
               <p>{item.result}</p>
             </article>
           ))}
-        </div>
+        </HorizontalCarousel>
 
         <a className="section-cta dark-cta" href="/experience">
           READ EVERY INTERNSHIP STORY <Arrow />

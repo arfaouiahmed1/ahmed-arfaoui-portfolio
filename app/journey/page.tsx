@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- supplied photography is pre-optimized for the static site */
 import type { Metadata } from "next";
+import { HorizontalCarousel } from "../components/HorizontalCarousel";
 import { Arrow, PageShell } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
@@ -14,20 +15,16 @@ export default function JourneyPage() {
       <section className="journey-canvas-container" aria-label="Interactive Journey Timeline">
         <header className="journey-canvas-header">
           <div>
-            <p className="eyebrow">MY ROUTE / HORIZONTAL CANVAS</p>
+            <p className="eyebrow">MY ROUTE / HORIZONTAL CAROUSEL</p>
             <h1>
               THE ROAD
               <br />
               WASN&apos;T <em>straight.</em>
             </h1>
           </div>
-          <div className="canvas-instruction" aria-hidden="true">
-            <span>SCROLL OR PAN HORIZONTALLY</span>
-            <span className="arrow-indicator">→</span>
-          </div>
         </header>
 
-        <div className="journey-horizontal-track" tabIndex={0} aria-label="Chapter scroll track">
+        <HorizontalCarousel ariaLabel="Journey chapters sequence">
           {/* Chapter 1: IPEIB */}
           <article className="canvas-card journey-card-ipeib">
             <div className="card-media">
@@ -162,7 +159,7 @@ export default function JourneyPage() {
               <p><span>RESULT</span><strong>EXCELLENT</strong></p>
             </div>
           </article>
-        </div>
+        </HorizontalCarousel>
       </section>
 
       <section className="graduation-film section-shell" data-scroll-scene>

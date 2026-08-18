@@ -2901,6 +2901,111 @@ html[data-motion-ready="true"] [data-reveal].is-visible {
   }
 }
 
+/* Reusable Horizontal Carousel Styles */
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.carousel-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 4px;
+  border: none;
+  background: rgba(242, 239, 232, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 200ms ease, width 200ms ease;
+  padding: 0;
+}
+
+.carousel-dot.is-active {
+  background: var(--red);
+  width: 24px;
+}
+
+.carousel-dot:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.carousel-nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgba(242, 239, 232, 0.25);
+  background: rgba(17, 19, 21, 0.8);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.carousel-nav-btn:hover:not(:disabled) {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+
+.carousel-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.carousel-nav-btn:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 12px 0 24px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) rgba(242, 239, 232, 0.1);
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track::-webkit-scrollbar {
+  height: 5px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 3px;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
 /* Trajectory Horizontal Track */
 .trajectory-horizontal-track {
   display: flex;
