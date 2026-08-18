@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- supplied photography is pre-optimized for the static site */
 import type { Metadata } from "next";
+import { HorizontalCarousel } from "../components/HorizontalCarousel";
 import { Arrow, PageShell } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
@@ -8,235 +9,157 @@ export const metadata: Metadata = {
     "From difficult preparatory years at IPEIB to graduating from ESPRIT with an excellent mention.",
 };
 
-const roadmap = ["IPEIB", "ESPRIT", "GRADUATION"];
-
 export default function JourneyPage() {
   return (
     <PageShell>
-      <section
-        className="journey-opening journey-scroll-scene"
-        data-scroll-scene
-      >
-        <div className="journey-opening-stage">
-          <img
-            className="journey-opening-image"
-            src="/journey/ipeib-sky.png"
-            alt="The landscape and tower near IPEIB"
-            width="679"
-            height="906"
-          />
-          <div className="journey-opening-wash" aria-hidden="true" />
-          <div className="journey-opening-copy">
-            <p className="eyebrow">MY ROUTE / THREE CHAPTERS</p>
+      <section className="journey-canvas-container" aria-label="Interactive Journey Timeline">
+        <header className="journey-canvas-header">
+          <div>
+            <p className="eyebrow">MY ROUTE / HORIZONTAL CAROUSEL</p>
             <h1>
               THE ROAD
               <br />
-              WASN&apos;T
-              <br />
-              <em>straight.</em>
+              WASN&apos;T <em>straight.</em>
             </h1>
-            <p>
-              I struggled at IPEIB, changed direction, started again at ESPRIT,
-              and finished as an engineer with an excellent mention.
-            </p>
           </div>
+        </header>
 
-          <div className="journey-opening-status" aria-hidden="true">
-            <span>START / PREPA</span>
-            <strong>KEEP SCROLLING</strong>
-            <i />
-          </div>
-
-          <ol className="journey-roadmap" aria-label="Journey chapters">
-            {roadmap.map((stop, index) => (
-              <li key={stop}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                {stop}
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section
-        className="journey-chapter journey-chapter-ipeib"
-        data-scroll-scene
-      >
-        <div className="journey-chapter-stage">
-          <div className="journey-chapter-media">
-            <img
-              src="/journey/ipeib-sky.png"
-              alt="A view near IPEIB under a clear blue sky"
-              width="679"
-              height="906"
-              loading="lazy"
-              decoding="async"
-            />
-            <span className="journey-image-label">THE FIRST ROUTE / IPEIB</span>
-          </div>
-
-          <div className="journey-chapter-copy">
-            <p className="eyebrow">CHAPTER 01 / IPEIB</p>
-            <div className="education-mark journey-education-mark">
+        <HorizontalCarousel ariaLabel="Journey chapters sequence">
+          {/* Chapter 1: IPEIB */}
+          <article className="canvas-card journey-card-ipeib">
+            <div className="card-media">
               <img
-                src="/education/ipeib.png"
-                alt="IPEIB logo"
-                width="948"
-                height="762"
+                src="/journey/ipeib-sky.png"
+                alt="A view near IPEIB under a clear blue sky"
+                width="679"
+                height="906"
                 loading="lazy"
-                decoding="async"
               />
-              <div>
-                <small>PREPARATORY CYCLE</small>
-                <strong>IPEIB</strong>
+              <span className="card-label">CHAPTER 01 / PREPA CYCLE</span>
+            </div>
+            <div className="card-content">
+              <div className="education-mark journey-education-mark">
+                <img
+                  src="/education/ipeib.png"
+                  alt="IPEIB logo"
+                  width="948"
+                  height="762"
+                  loading="lazy"
+                />
+                <div>
+                  <small>PREPARATORY CYCLE</small>
+                  <strong>IPEIB</strong>
+                </div>
+              </div>
+              <h2>
+                I TRIED.
+                <br />
+                I FAILED.
+                <br />
+                <em>I stayed.</em>
+              </h2>
+              <p>
+                Prepa was rough for me. I worked, failed more than once, and watched my confidence drop with every result.
+              </p>
+              <p>
+                I still wanted to become an engineer. The honest decision was to find another route and keep going.
+              </p>
+            </div>
+            <div className="card-telemetry">
+              <p><span>ROUTE</span><strong>PREPA</strong></p>
+              <p><span>RESULT</span><strong>FAILED</strong></p>
+              <p><span>DECISION</span><strong>CONTINUE</strong></p>
+            </div>
+          </article>
+
+          {/* Chapter 2: ESPRIT */}
+          <article className="canvas-card journey-card-esprit">
+            <div className="card-media">
+              <img
+                src="/education/esprit-campus.jpg"
+                alt="The ESPRIT campus"
+                width="1280"
+                height="853"
+                loading="lazy"
+              />
+              <span className="card-label">CHAPTER 02 / ESPRIT</span>
+            </div>
+            <div className="card-content">
+              <div className="education-mark journey-education-mark">
+                <img
+                  src="/education/esprit.svg"
+                  alt="ESPRIT logo"
+                  width="472"
+                  height="220"
+                  loading="lazy"
+                />
+                <div>
+                  <small>SOFTWARE ENGINEERING</small>
+                  <strong>ESPRIT</strong>
+                </div>
+              </div>
+              <h2>
+                A CLEAN
+                <br />
+                <em>restart.</em>
+              </h2>
+              <p>
+                ESPRIT was using what those tough years taught me. I arrived disciplined and studying in a way that worked for me.
+              </p>
+              <p>
+                Formula 1 pulled me toward data: lap times, telemetry, tyre strategy. That curiosity turned into ML and AI agents.
+              </p>
+              <div className="journey-build-line" aria-label="Skills developed at ESPRIT">
+                <span>DATA</span>
+                <i />
+                <span>ML</span>
+                <i />
+                <span>AGENTS</span>
               </div>
             </div>
-            <h2>
-              I TRIED.
-              <br />
-              I FAILED.
-              <br />
-              <em>I stayed.</em>
-            </h2>
-            <p>
-              Prepa was rough for me. I worked, failed more than once, and
-              watched my confidence drop with every result. For a while, it felt
-              like effort and progress had nothing to do with each other.
-            </p>
-            <p>
-              I still wanted to become an engineer. The honest decision was not
-              to repeat the same year in the same way. It was to find another
-              route and keep going.
-            </p>
-          </div>
+            <div className="card-telemetry">
+              <p><span>ROUTE</span><strong>ENGINEERING</strong></p>
+              <p><span>FOCUS</span><strong>DATA + AI</strong></p>
+              <p><span>MODE</span><strong>BUILDING</strong></p>
+            </div>
+          </article>
 
-          <aside className="journey-telemetry" aria-label="IPEIB chapter notes">
-            <p><span>ROUTE</span><strong>PREPA</strong></p>
-            <p><span>RESULT</span><strong>FAILED</strong></p>
-            <p><span>DECISION</span><strong>CONTINUE</strong></p>
-          </aside>
-          <span className="journey-ghost-number" aria-hidden="true">01</span>
-        </div>
-      </section>
-
-      <section
-        className="journey-chapter journey-chapter-esprit"
-        data-scroll-scene
-      >
-        <div className="journey-chapter-stage">
-          <div className="journey-chapter-media">
-            <img
-              src="/education/esprit-campus.jpg"
-              alt="The ESPRIT campus"
-              width="1280"
-              height="853"
-              loading="lazy"
-              decoding="async"
-            />
-            <span className="journey-image-label">THE RESET / ESPRIT</span>
-          </div>
-
-          <div className="journey-chapter-copy">
-            <p className="eyebrow">CHAPTER 02 / ESPRIT</p>
-            <div className="education-mark journey-education-mark">
+          {/* Chapter 3: Graduation */}
+          <article className="canvas-card journey-card-graduation">
+            <div className="card-media">
               <img
-                src="/education/esprit.svg"
-                alt="ESPRIT Honoris United Universities logo"
-                width="472"
-                height="220"
+                src="/media/graduation-with-mom-and-friends.webp"
+                alt="Ahmed after graduation with his mother and friends"
+                width="2200"
+                height="1238"
                 loading="lazy"
-                decoding="async"
               />
-              <div>
-                <small>SOFTWARE ENGINEERING</small>
-                <strong>ESPRIT</strong>
+              <span className="card-label">CHAPTER 03 / FINISH</span>
+            </div>
+            <div className="card-content">
+              <h2>
+                EXCELLENT
+                <br />
+                <em>mention.</em>
+              </h2>
+              <p>
+                Graduation mattered because I knew how close I came to stopping. The failures were part of the story, but not the ending.
+              </p>
+              <p>
+                My mother and friends were there after the presentation. They were there for the difficult years too.
+              </p>
+              <div className="journey-result-badge">
+                <span>FINAL RESULT</span>
+                <strong>ENGINEERING DEGREE</strong>
+                <em>EXCELLENT MENTION</em>
               </div>
             </div>
-            <h2>
-              A CLEAN
-              <br />
-              <em>restart.</em>
-            </h2>
-            <p>
-              ESPRIT was not me erasing the years before it. It was me using
-              what they taught me. I arrived more realistic, more disciplined,
-              and finally studying in a way that worked for me.
-            </p>
-            <p>
-              Formula 1 pulled me toward data: lap times, telemetry, tyre
-              strategy, and all the decisions hidden in numbers. At ESPRIT that
-              curiosity turned into software, dashboards, machine learning,
-              deep learning, and eventually AI agents.
-            </p>
-
-            <div className="journey-build-line" aria-label="Skills developed at ESPRIT">
-              <span>DATA</span>
-              <i />
-              <span>ML</span>
-              <i />
-              <span>DEEP LEARNING</span>
-              <i />
-              <span>AGENTS</span>
+            <div className="card-telemetry">
+              <p><span>STATUS</span><strong>GRADUATED</strong></p>
+              <p><span>RESULT</span><strong>EXCELLENT</strong></p>
             </div>
-          </div>
-
-          <aside className="journey-telemetry" aria-label="ESPRIT chapter notes">
-            <p><span>ROUTE</span><strong>ENGINEERING</strong></p>
-            <p><span>FOCUS</span><strong>DATA + AI</strong></p>
-            <p><span>MODE</span><strong>BUILDING</strong></p>
-          </aside>
-          <span className="journey-ghost-number" aria-hidden="true">02</span>
-        </div>
-      </section>
-
-      <section
-        className="journey-chapter journey-chapter-graduation"
-        data-scroll-scene
-      >
-        <div className="journey-chapter-stage">
-          <div className="journey-chapter-media">
-            <img
-              src="/media/graduation-with-mom-and-friends.webp"
-              alt="Ahmed at ESPRIT after graduation with his mother and friends"
-              width="2200"
-              height="1238"
-              loading="lazy"
-              decoding="async"
-            />
-            <span className="journey-image-label">THE FINISH / JULY 2026</span>
-          </div>
-
-          <div className="journey-chapter-copy">
-            <p className="eyebrow">CHAPTER 03 / GRADUATION</p>
-            <h2>
-              EXCELLENT
-              <br />
-              <em>mention.</em>
-            </h2>
-            <p>
-              Graduation mattered because I knew exactly how close I had come
-              to stopping. The failures were still part of the story, but they
-              were no longer the ending.
-            </p>
-            <p>
-              My mother and my friends were there after the presentation. I
-              wanted them in this page because they were there for the difficult
-              years too, not just the good photo at the end.
-            </p>
-            <div className="journey-result-badge">
-              <span>FINAL RESULT</span>
-              <strong>ENGINEERING DEGREE</strong>
-              <em>EXCELLENT MENTION</em>
-            </div>
-          </div>
-
-          <aside className="journey-telemetry" aria-label="Graduation chapter notes">
-            <p><span>STATUS</span><strong>GRADUATED</strong></p>
-            <p><span>RESULT</span><strong>EXCELLENT</strong></p>
-            <p><span>NEXT</span><strong>KEEP BUILDING</strong></p>
-          </aside>
-          <span className="journey-ghost-number" aria-hidden="true">03</span>
-        </div>
+          </article>
+        </HorizontalCarousel>
       </section>
 
       <section className="graduation-film section-shell" data-scroll-scene>
