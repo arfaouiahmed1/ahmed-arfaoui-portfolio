@@ -415,7 +415,7 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="trajectory section-shell" data-scroll-scene>
+      <section className="trajectory section-shell" data-scroll-scene aria-label="Career Trajectory Timeline">
         <div className="section-heading compact">
           <div>
             <p className="eyebrow">04 / TRAJECTORY</p>
@@ -427,13 +427,13 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="experience-grid">
+        <div className="trajectory-horizontal-track" tabIndex={0} aria-label="Career trajectory cards">
           {internships.map((item) => (
-            <article key={item.company} data-scroll-scene>
-              <div className="experience-marker">
-                <span>{item.number}</span>
+            <article className="trajectory-card" key={item.company} data-scroll-scene>
+              <div className="trajectory-card-header">
+                <span className="trajectory-number">{item.number}</span>
+                <p className="trajectory-year">{item.dates}</p>
               </div>
-              <p className="experience-year">{item.dates}</p>
               <h3>{item.role.replace(" · Graduation Internship", "")}</h3>
               <h4>{item.company}</h4>
               <p>{item.result}</p>

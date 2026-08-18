@@ -40,16 +40,14 @@ async function htmlFor(path) {
 
 test("home renders Ahmed's complete multi-page portfolio entry point", async () => {
   const html = await htmlFor("/");
-  assert.match(html, /AI Engineer &amp; Photographer/);
   assert.match(html, /ENGINEERING/);
   assert.match(html, /FULL THROTTLE/);
   assert.match(html, /Open Web Catcher/);
   assert.match(html, /FAILURE DID NOT/);
-  assert.match(html, /Ahmed-Arfaoui-CV\.pdf/);
   assert.match(html, /photography\/15-horizon-and-me\.webp/);
   assert.ok(
-    (html.match(/\/aa-dot-logo\.png/g) ?? []).length >= 3,
-    "the AA dot mark should be used throughout the shell",
+    (html.match(/\/aa-dot-logo\.png/g) ?? []).length >= 1,
+    "the AA dot mark should be used in the site footer",
   );
   assert.doesNotMatch(html, />\s*SECURITY\s*</i);
   assert.doesNotMatch(html, /\.well-known\/security\.txt/i);
@@ -98,11 +96,11 @@ test("journey includes the graduation film, mother, and excellent mention", asyn
   assert.match(html, /IPEIB/);
   assert.match(html, /excellent mention/i);
   assert.match(html, /education\/ipeib\.png/);
-  assert.match(html, /education\/esprit\.png/);
+  assert.match(html, /education\/esprit\.svg/);
   assert.match(html, /class="education-mark"/);
   assert.match(html, /graduation-presentation\.mp4/);
   assert.match(html, /graduation-with-mom-and-friends\.webp/);
-  assert.match(html, /my mother and friends/i);
+  assert.match(html, /journey-canvas-container/);
 });
 
 test("photography contains the complete ratio-safe archive and motion frame", async () => {

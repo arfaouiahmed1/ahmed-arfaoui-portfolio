@@ -19,28 +19,32 @@ export function SiteFooter() {
 
 export function HeroTelemetry({ lap }: { lap: string }) {
   return (
-    <aside className="page-telemetry" aria-hidden="true">
-      <div className="telemetry-orbit">
-        <BrandMark className="telemetry-mark" />
-        <span className="telemetry-lap">{lap}</span>
-        <small className="telemetry-data">RACE DATA</small>
-      </div>
-      <div className="telemetry-sectors">
-        <p className="telemetry-sector">
-          <span>S1</span>
-          <i />
-          <strong>29.441</strong>
-        </p>
-        <p className="telemetry-sector">
-          <span>S2</span>
-          <i />
-          <strong>31.807</strong>
-        </p>
-        <p className="telemetry-sector">
-          <span>S3</span>
-          <i />
-          <strong>27.114</strong>
-        </p>
+    <aside className="page-telemetry" aria-label="Race telemetry overview">
+      <div className="telemetry-hud">
+        <div className="telemetry-badge">
+          <BrandMark className="telemetry-mark" />
+          <div className="telemetry-meta">
+            <span className="telemetry-lap">{lap}</span>
+            <small className="telemetry-data">RACE DATA / TELEMETRY</small>
+          </div>
+        </div>
+        <div className="telemetry-sectors">
+          <p className="telemetry-sector">
+            <span>S1</span>
+            <i />
+            <strong>29.441</strong>
+          </p>
+          <p className="telemetry-sector">
+            <span>S2</span>
+            <i />
+            <strong>31.807</strong>
+          </p>
+          <p className="telemetry-sector">
+            <span>S3</span>
+            <i />
+            <strong>27.114</strong>
+          </p>
+        </div>
       </div>
     </aside>
   );
